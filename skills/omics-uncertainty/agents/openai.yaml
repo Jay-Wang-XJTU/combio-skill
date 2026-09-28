@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 分层不确定性、传播与校准"
+  short_description: "整合多个模型/测量阶段、汇报置信区间、稳健性或恶变风险分数时。"
+  default_prompt: "请使用 $omics-uncertainty 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

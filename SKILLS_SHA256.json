@@ -1,0 +1,253 @@
+{
+  "skills": {
+    "omics-benchmark": {
+      "SKILL.md": "917bb5b103a7bd0a1ba4eb32bcdcede2bacb3776e9d54f27df59cac29673d81b",
+      "agents/openai.yaml": "9c9c55acaedeae42718336e057bf89c387b057c0027a32e5a59ac240498c8a57"
+    },
+    "omics-biology": {
+      "SKILL.md": "795584245656fdec948cfbd71bd651d66bc190292d71f07b9aec81a3c02e65ff",
+      "agents/openai.yaml": "a2c9c1b35c1526f91ee62a541c70633470b69ade494fd0a1661b9b52476904b8"
+    },
+    "omics-causal": {
+      "SKILL.md": "ca88301a3f71be7fe57752365ec4c64b99a5d4078ec02c7c9f1aea0d4322780f",
+      "agents/openai.yaml": "98d25e3d241478480187fdc8f5fd8190b6eba3054086e9b41245748b6f2fb888"
+    },
+    "omics-clinical": {
+      "SKILL.md": "b24a5618ccfe615000bf17d4ecb150d0aed1117f311dc6d9f5e277aa3eecae95",
+      "agents/openai.yaml": "eb455948d1b15e97fec7e8ba0eab207496573fefd93d59327b8df38afe88788b"
+    },
+    "omics-code-audit": {
+      "SKILL.md": "dda2551fe74006cff0624bd0c9bd6032e3eb65bf880428303a3fa0a6805e7abe",
+      "agents/openai.yaml": "105c49f85c82cbd70eb68a9722b4785a97395c98762f75808a6a5d50aab91c23"
+    },
+    "omics-communication": {
+      "SKILL.md": "fc897ebf94725fdb6206e338247d0f1dc197491d7604f1a444e69f8621bca7d1",
+      "agents/openai.yaml": "62c7bf1cc921fb4d8c93bfbf988612d45998d6256256a6a1bd51660a490570b8"
+    },
+    "omics-data": {
+      "SKILL.md": "785e9634115a38c8888660d137a7691ce9fab44bf514948402f372310fbaefb6",
+      "agents/openai.yaml": "3cbcc6fc3b64fe927689fec4d8819d13b746259e240aca45e2f2c9bd28d6e0d7"
+    },
+    "omics-dynamics": {
+      "SKILL.md": "21e7f0f5ffa0dad08b2ac2e3e6dc719af3d063c2a22d399883bcc07e7d930332",
+      "agents/openai.yaml": "3609404da2a36b3e5f951fba8153d6084326f092777365dc24bce63224ab5ac3"
+    },
+    "omics-engineering": {
+      "SKILL.md": "56afb9b7ff30cad2f5a25832db9e2544d34d7c8a5feaa75a8b0b2465f7162e93",
+      "agents/openai.yaml": "56154f3ada765ae97ff67700aa5bc31606e6a8320c8259ec44ffe8ecac97ad85"
+    },
+    "omics-evidence": {
+      "SKILL.md": "685ac98778cec72f55058c934a6a7aaea979c3c37e38a4d10b258ce0bb87fc4a",
+      "agents/openai.yaml": "ed747098ac21b6901efa968429fb7385207dfd05512fc4b18cacc2b1ffd21a89"
+    },
+    "omics-falsification": {
+      "SKILL.md": "161f3563fd8901848be86c1755de7d75fe7f4dbc4d57ea1eba9426c142c07249",
+      "agents/openai.yaml": "51ba29cb5a15307d8945ce3e2edb02ede731d64fd89fc3f1dd8ffd855a15ab0b"
+    },
+    "omics-flow-matching": {
+      "SKILL.md": "154069833f7906dd2ef546c6c921c9848f6fc2a21a4deccb7c57f9f458991f68",
+      "agents/openai.yaml": "e75a89eb40f8c77179733753842f387030600b53724a3be4274cf79a645e5b55"
+    },
+    "omics-graph": {
+      "SKILL.md": "276fd75a47e4da571fa0f7d51d9ed36039b930951f86de2dd2ded721f450391d",
+      "agents/openai.yaml": "77fd8a6cb32553c437bd5432011ea26edff5f8aae9068b7a6e2b85a5b359eeb3"
+    },
+    "omics-integration": {
+      "SKILL.md": "61c7a4f384989960385ad9c155a82abc41e0eaad9964793924de258742665506",
+      "agents/openai.yaml": "f5cc6df601f09e2914b1e2f68ca8fad2b267e79bf6895ca92496681ff35ea592"
+    },
+    "omics-literature": {
+      "SKILL.md": "700482f9be7fcf6a7aa796ab01b6508d7117d56478a3e988133aba964f90a597",
+      "agents/openai.yaml": "067c11c938129a9957452af191a67ee43c31cb5e947d6aaf341254bf205849e2"
+    },
+    "omics-mapping": {
+      "SKILL.md": "f39d1d0ba8015bc64d07255b3b82cd1feb306740927a05a9003b763b27f2b7d5",
+      "agents/openai.yaml": "e0d3e2d5fa4e82b6aaf2f43d4024900e2308289bd7786b56b40713b64cf26338"
+    },
+    "omics-multiple-testing": {
+      "SKILL.md": "a5416d0b6bd65bc74df1dc2b653b78686296621fa44fc63c0b69a953768b105a",
+      "agents/openai.yaml": "59ed1beb62f1a33c2737b127b07914c677d46751b370b5508a867b6ccc2bfe40"
+    },
+    "omics-ot": {
+      "SKILL.md": "a65277912408db9af4f229e109be2aaddf9ae1047148b1153e0ab0772eb92309",
+      "agents/openai.yaml": "3f478000d82e128ac1b4a486520681b645914e174dd71b151011de1367318eb6"
+    },
+    "omics-preprocessing": {
+      "SKILL.md": "fb7d3d23a1f48c0b3949d2ccb6b646a8f137f2a912b1a9bca4a6164283abb985",
+      "agents/openai.yaml": "684b0d5d0428ae932f018b0056798c9e72ccb8823f8bbecc7a562a85cc010f34"
+    },
+    "omics-programs": {
+      "SKILL.md": "9b2dc95a611e652ab4a38513ee78682f6f8e4f040405f1cd0a1139f0d758142a",
+      "agents/openai.yaml": "965550d843d46658ec922f6c64abcea0f5a62ed0ac3d5535c5e2c4d722074373"
+    },
+    "omics-question": {
+      "SKILL.md": "c43cc6ab85401bd057a7581604dfed0921fb2960ebd287293513b53e87180166",
+      "agents/openai.yaml": "834a37f87a0cac54047db3343ace7594de491f384ab616cc7ffcc7d24438d841"
+    },
+    "omics-representation": {
+      "SKILL.md": "551bb7b5e42ddd6026c3d1d527f2e6c27c9bea9881d311ffca9ab9dcc3996a5d",
+      "agents/openai.yaml": "41155510a79c4816ac4460b01510a6fd8c1d48b63578055fc673ab47f3149818"
+    },
+    "omics-reproduction": {
+      "SKILL.md": "a232ab14e61f3682ed07a7ce9b005d5dc1f81c02240f4229c8c26efe8716fb1f",
+      "agents/openai.yaml": "1ad3b095ad7e4a6c9d3b752e07276838c3ee06d4fbfb458176c459d665696107"
+    },
+    "omics-research": {
+      "SKILL.md": "b74caa8c56070498fe7b77eea22e4193560dbe3de07bce5093c8ce5345ddfb9f",
+      "agents/openai.yaml": "558eda0fada10baf2b3077037b3cc28bc92e1c2fb3f000fa07abdd90e391d9fe",
+      "library/AGENTS.md": "7924cfbb63d076867ab199064847d3844a9c78ae849829d261b51a05de138e65",
+      "library/CHANGELOG.md": "11d40862803a0bacbb3724fc30cee82609706d8bc680b73a467942ff0d9e9bc6",
+      "library/GUIDE.md": "000870cf22dbfac7d11b28eaed9568553df892b1a0adba24022ed044bb49ef91",
+      "library/KNOWLEDGE_BASE_ZH.md": "3a64ed8a81a1cec0fd9d064602d7db594834fe2989a0ebe98d76f55f427e2e54",
+      "library/LEARNING_PATH_ZH.md": "c713c4a7f49cf8d64d2686b259c59316fc323efac4a4dd25fa45caf760800ee0",
+      "library/LICENSE_AND_ATTRIBUTION.md": "f325bb719464078934d2d7bcc7aa35d788bc7d23d11c76afe58c99696db99544",
+      "library/README.md": "e50248a7e063fd2732eba29b58fb50a05b7becb866ee7b0aeb04960f18bfb63a",
+      "library/UPGRADE_REPORT_ZH.md": "497e0c9236f050c9143f407c711842b0e1365a296d490c1fbe7292463fce92b6",
+      "library/audits/ACCESS_AND_EXECUTION_LIMITS.md": "e70ef0c6b9c59d320287f8d21c0dfecb31bff1af7b8ca64f6eb5bd6abe939cf8",
+      "library/audits/PAPER_REPRODUCTION_MATRIX.md": "f78b83cc82f0bc24f09c433d5510d63f44a5ca05f3a1523dfd430ca3c63dcbd0",
+      "library/audits/TARGETED_SOURCE_AUDIT.md": "745d5757c26ece2f6284e0428428a92a9a4c14341e801ecc0b4473d8a254613f",
+      "library/audits/paper_reproduction_matrix.json": "6d6dfac863ad7b50cd98a0d785054a19ea6f41138a1896b13cd064f3e2d85545",
+      "library/audits/source_audit.json": "1793eff72bad30e7834985b1cdb7b71f903bd7e8d96720d5131f3bf306112d9c",
+      "library/audits/supplement_coverage.json": "bf3855aa379d79f85577fadb995bb0a8695308f3aa43a388f4184714f1e9bff4",
+      "library/coverage_gaps.md": "44edb9f14364bde565c50fa0b2fdf372e9e275a047599327334679cb5e759418",
+      "library/evaluations/README.md": "3f500f4952accefd582c95ffc00bdfc8f430b5f47e7f61e6295035a20ea645c5",
+      "library/evaluations/cases.json": "9756aeb611a9db8e195bb97e5d8f2600e65bc65478e2d5a1addc9c7e54829ae3",
+      "library/evaluations/structure_validation.json": "85d59f5a09d0d9c8a27adcd2fe801df312c7699bac8c1f6336ee2cd89069c359",
+      "library/history/KNOWLEDGE_BASE_ZH_v0.1.md": "7d62fe52dd0ac05d7d766f92cc7f8f459a70540b7d74540b3988a43b5e66ab2a",
+      "library/history/README.md": "30babd3758f0efbd3bbc8fccc353c6f512256fb5593e21e50402931bcced793a",
+      "library/history/coverage_gaps.md": "1e141f40c534e70b13394fff69f497cd7def5035b3555c5e29fa7e01c32bd609",
+      "library/history/v0.1_structure_validation.json": "ccdee226ab624f2ccfd51ac35e417484e7e93040defa90a0bde2433475bb0793",
+      "library/knowledge/01_reproduction.md": "8606c1127eca9069788cff776ee21b6f45cfc6d156d4daf081957e85f6eb69e9",
+      "library/knowledge/02_statistics.md": "379bb30874086337500c2009f1b8184ba17bb91c11c750907bc5265699215b4a",
+      "library/knowledge/03_causal.md": "038aab681fb54af669ba2cb59320811efa28d39ed4035d1e2cd2d3d33d71e795",
+      "library/knowledge/04_spatial_error.md": "a3fa372972761ac88af6dd2ec5fc4c6033d38cdf8dbf267dc1036debaf44e5b1",
+      "library/knowledge/05_ot.md": "fa9fde35adf6df4df31a3f3208823592238e3f09585dd4d44615d95d1dbc77d7",
+      "library/knowledge/06_flow_matching.md": "b8f1e27e22f46f00feb235b41968cc4ddec8242e3e5d805c92cb56ed15fde916",
+      "library/knowledge/07_uncertainty.md": "fc595abaad1916caa04f79eeb68e8b5eaed7075490afe4c6b2b3cdebf74159be",
+      "library/lab/README.md": "c3142a34175ab4b8d74dd05e0109db5c6b9e8b95b9305f74918a46a54dbcbbc2",
+      "library/lab/__init__.py": "823ffced6cf4eba577b73ff13c773163b25f9542e4ed84a6a50f63a6807b706d",
+      "library/lab/causal.py": "ac1bcff7e00fe4247a3eeae2c8e12a53a1443d08d6afa2c4f8b70cb4a34631dd",
+      "library/lab/flow.py": "26873cd033d462d12096c5527585d07c9a120bfbf2f7243657bbcf47c6c33cf5",
+      "library/lab/run_all.py": "e5bd094385ec16a1fa642413066aea0234f991a85073508bedc5da851c3dc811",
+      "library/lab/spatial.py": "8a4d9e9dcf3eec76876ab41e3bab1eca0cbcdd22be54b1d58bae8e2e106af5e1",
+      "library/lab/statistics.py": "ff837fbf92e4b497fe5a60197eab33185cb65288e419c48b11cf0cb0797b879a",
+      "library/lab/transport.py": "ac75152c427ee3cb5acd1ee6ce7283d5bbf4d861446ecf75283284e69d3cb329",
+      "library/manifest.json": "2425b9a89814e092296af3644ac3109e3bfa741bf1cf25a7389f5a7d7072cd1a",
+      "library/notebooks/01_independent_replicates.ipynb": "2c21bb2a56477024df08a5b2837bfa65c0376d67447d7cb6e3feed9600bc7d83",
+      "library/notebooks/02_multiple_testing.ipynb": "7c54c3379c40fa3e901a5149827c9d7c2b9fceb80aef8734b0e8b11d8740ee30",
+      "library/notebooks/03_causal_identification.ipynb": "62cb2ad338bf03fc98794747a63cfd6f0e1e399be2e5bcf0855b3c1eed928486",
+      "library/notebooks/04_spatial_error.ipynb": "8e9dc4d1f614211b5f4c75a202b3a0aafb88dc8979a262c11158139f2b5515b5",
+      "library/notebooks/05_optimal_transport.ipynb": "c5e93ef32f73483582fcaaaa5a794ce8acb37ee21b6acda7c5566f6992a9fbac",
+      "library/notebooks/06_flow_matching.ipynb": "c763f812d0109a91f0e7ebea8b0618bb7d892a932d83a83bf4a48f361080e2d7",
+      "library/notebooks/README.md": "7abdbec4c6c7f6e55b403dc04ff0848d16f36528b8e563435562c06b286ad180",
+      "library/papers/C1_CSN.md": "88cac4ffd93fc64cf650ef87e295c13b030abe20e85b797a407d51d9740ee7a6",
+      "library/papers/C2_stKeep.md": "96cd6103f593c8c7b1fe5adba4fe0cdb61505b3dfeb194f37138cf0286c6101a",
+      "library/papers/C3_stClinic.md": "744bda9015ee5251740e8270b86e2c5b1fe22eabcc8bc2d5910423feeecc95ab",
+      "library/papers/J1_DeepST.md": "e1b668746273fc5b217a4fd1d7da067c2cefbcfce01ba258d4b4bb312756eb30",
+      "library/papers/J2_DeepCCI.md": "8cf5e0781db9e4a7701ecbf59c8d08e7842828395ed018dfbdff00a3bc849366",
+      "library/papers/J3_DeepTalk.md": "de6796bec04203f7f594e6834c34c6c7d121bfa19a99441c5966050dc71ea694",
+      "library/papers/P1_Palantir.md": "9ebfb4ae0d0a3659eceba25fe78267dcebb4ea4b0079686ee2462a7a07b09188",
+      "library/papers/P2_SEACells.md": "956991adeb66031653de10ca7fc5a8d585b1e46f0861afaf12e2dfd7cb90aa2b",
+      "library/papers/P3_Spectra.md": "1b8ff0e50e1622522fe9b34109452adf342c8bf19134ee9b7bbf3e86bb37b8c5",
+      "library/papers/P4_ENVI_COVET.md": "10b07cb9b28a0e581645a8744dc6c7775c60ca22185628fde0933e4470353d01",
+      "library/papers/T1_scVelo.md": "9b04a394c975f7b6a4dd3b0c656fff9a1f76ba19573acf8a3f34a8c443cce258",
+      "library/papers/T2_scArches.md": "2994a37a37997d398c8f3e6ad5e52601b504e916199d5eee5838cccafa4bc767",
+      "library/papers/T3_CellRank_2.md": "71801dddc824ef395523517006a7faae9d29977bb8c50ace28e056a6bb66d749",
+      "library/papers/T4_moscot.md": "9af0554b513ab72e61cfb5351da642d01e77fb312ab7b346e549338728f189ea",
+      "library/papers/T5_NicheCompass.md": "5898dc45bcdb7a09315f4d3f6b718c9c1659efe35b439545d227dd4b07dfb917",
+      "library/papers/T6_scIB_integration_benchmark.md": "89648a2368c1c2a90692f3f384fc05263678ecc3bf18d67c2e1804322e6fe0b2",
+      "library/papers/Y1_SOTIP.md": "f80af26ee8e4259730e4aa80487dc26423f974a5b429252dcd05458188d92bfa",
+      "library/papers/Y2_MENDER.md": "0c4988dad66295be5406e03c553185572eaed41e8c0e424429390a65c5d063d4",
+      "library/papers/Y3_SPIRAL.md": "e135cf74fc9dbcb4fc63e316ef7457339fa0004959700d06aec2269694208927",
+      "library/papers/Y4_Spatial_clustering_benchmark.md": "2f17401a8cd8efde5c662a046cd07a0adf0253f0828885877b4a153e35f6577d",
+      "library/references/GAP_SOURCES.md": "be8bb3267f0b162e64274c2e0000117888e81b9645ae8147ebead6653f2e1235",
+      "library/references/READING_COVERAGE.md": "5b377c9a5ddf2950e421de0a4c081901be6c4f5477a2b7785c43ab8ddec15821",
+      "library/references/gap_sources.json": "dc6fabe2246616ca5a0be85deb6f0d1bad6272f53c32ad07e18be4de02f166a2",
+      "library/references/paper_registry.json": "7c3bcf03e87547b9cb7e7cd45cd890966983550ae6085f742d3e44511fe8da35",
+      "library/references/paper_registry.tsv": "bad9890101deae9ebbbb5046f22cae09a69380dc1cbfea5e7ac1685dce5f0473",
+      "library/references/skill_registry.json": "6b1d5fbd439a54dbda47a34f24309a0bc4f750f1085be3fef14227dec8120f0e",
+      "library/requirements-tested.txt": "c75ad4609297948a22c9bbb6230ceca64c0b2b725cd52b0a2d5a52a79dba709e",
+      "library/results/causal_identification.json": "6f874d8cd5a80c1f9123211a5cd4a6311ddd85fdb221474b6a52d2d79822df93",
+      "library/results/environment.json": "2ed33c2f047674ae3546063abcf13291cacfbef089cda8ecb9a37e2ab099231c",
+      "library/results/execution_report.json": "39f8f9877737349257f89418d01364d5a9790cfe50a15f5f80f37e82072bb5f0",
+      "library/results/flow_matching.json": "c7d3fac8ecf5fd250c91193040792334683c17b4449b66bb5a278db06c958477",
+      "library/results/independent_replicates.json": "449e42e11f894112db54d1c65263e097f252013a0a8ce38d8a7ce6412706d0d6",
+      "library/results/multiple_testing.json": "8deb38137ab7b341aac73032aff1c27fcd87adeba2558c4a4e56cfdfea8d0ac2",
+      "library/results/notebook_execution.json": "f9bf27d646bad4d9f8391ba49e6eb00bbef1699576c01b906158a11fbf5ffdc6",
+      "library/results/optimal_transport.json": "89ed2a59499534b90724aae389af39ab6b04505f98992390d1527715937ecf6f",
+      "library/results/pytest.xml": "2ad7fdb7c1c43ca11a7d06b6d9f3498092be6d923a7aaf186854f282dcbf1339",
+      "library/results/pytest_stdout.txt": "5a80f68e4068c1a4c9a7217d9e89b4415e27eba648573f9ad675330ffe75f5f0",
+      "library/results/run_stdout.txt": "c5b9d89c978b36f7483b7988e4feb6662b5654d5cfbb61840d218acaa58c3447",
+      "library/results/spatial_measurement.json": "7c9d56bb4861fd50083b129207adf1dd3c41dddd3ee640097bf9ea160febdb6b",
+      "library/results/validation_summary.json": "cc14b6a8ae153ab920d44ea827217c8c0f971bfedd8909f1888a58f579f62e25",
+      "library/skills/01-question-and-estimand/GUIDE.md": "9e250d83903cb1bff81f2c2f381ade059d140106664d26d5ddde1cafb8a2f59c",
+      "library/skills/02-literature-gap-and-prior-art/GUIDE.md": "42a4597ec814a50af2fdd91e8914514f28326be957437a94d618e37cff89779c",
+      "library/skills/03-data-contract-and-feasibility/GUIDE.md": "7656dfb6524af7c6dbf3b75e313b6297312b718124af50bf67c6f832337106de",
+      "library/skills/04-analysis-unit-and-representation/GUIDE.md": "429ccde61995c50c567947cf988b63260841513d6d97c4bfbf8b351e70ebcb15",
+      "library/skills/05-observation-model-and-preprocessing/GUIDE.md": "3896a607ea3ddaba1a65fe18b5fb3883e617d4941c25fa11bc040f3aa5117166",
+      "library/skills/06-graph-and-message-passing-design/GUIDE.md": "94a1e3b1cebc5c1e0a2813188e0a16a9a7447ba592443778d677dc31c7744e20",
+      "library/skills/07-integration-and-reference-mapping/GUIDE.md": "54f6056c659d4ec211a724c0b612b0697ff9f859e988e9a7f7d2ac0fd401900e",
+      "library/skills/08-interpretable-program-learning/GUIDE.md": "44d8dd413ab227cf4041cd993d97b86589d84bb14a0ae4d3b94b8e6c95207db7",
+      "library/skills/09-dynamics-fate-and-transport/GUIDE.md": "4fb1db31cd5ba90006ca287d6027a752ad8ce39eb9d1bb848beb0e1d62f33ad8",
+      "library/skills/10-spatial-mapping-and-imputation/GUIDE.md": "5ecb8de67bd4b188b7934981e34ef5b78ca39e8c0402b03dcee4d4857445bf68",
+      "library/skills/11-communication-and-network-evidence/GUIDE.md": "41e6261fa614f9e1f921f4e4d44b37fcbabd84f165703aaf82acd28058104480",
+      "library/skills/12-minimum-falsification-and-simulation/GUIDE.md": "b2dd2216052b26e01c3bdf2b569038bd69d121e76da553e4d73eea1d8f3760f6",
+      "library/skills/13-information-matched-benchmarking/GUIDE.md": "d99d35fcdaa52ebaaa55af336d0a1da888576a50fca499ad6775654caf45716b",
+      "library/skills/14-robustness-and-identifiability/GUIDE.md": "e0897e9b485b844e71fa2549b5114bd42422283669f41741ddaff4314502ef7f",
+      "library/skills/15-statistical-and-clinical-validation/GUIDE.md": "88457f3c1ba805e9f7171d8a914df1e1e8cf624b7533a498529e7980749b9b10",
+      "library/skills/16-biological-discovery-and-validation/GUIDE.md": "793fcfb1e79fc684dff9452a30ab6f021e6281eb9b9cd2a90213fd2a3e9042ba",
+      "library/skills/17-engineering-and-scaling/GUIDE.md": "01d3f37d74000e752cd4e85a23439be2de048c82b72359f0f012184345980f74",
+      "library/skills/18-claim-evidence-and-paper-design/GUIDE.md": "2502f3520e585b4d90a5e00ce2f83de5868a6d8b3d52f032df80be2c4c7f6639",
+      "library/skills/19-source-code-reproduction-audit/GUIDE.md": "611811dd69e4a2f34ea9fe5ea994f9570afe1999f5b7f24a505a9f555b5d5ace",
+      "library/skills/20-skill-evaluation-and-versioning/GUIDE.md": "ee014d62e1e21c069f69e7feed0b545c3329766414708abe2b76cd96fd3256ad",
+      "library/skills/21-independent-replicates-and-resampling/GUIDE.md": "0aded28d922ad518ed94e2348e4ee4cca04b3a81a84dcd51db9220f886808597",
+      "library/skills/22-multiple-testing-and-selective-inference/GUIDE.md": "d23f40e611f26bcd92ddb9c507654b3dca910b77880a069dfe5a8e0fe5cf85ef",
+      "library/skills/23-causal-identification-and-perturbations/GUIDE.md": "5780b021340c53d7ff1fa2d60ef98ee550c8dc9ef5aa0e4f51ec0a8d79e37ae5",
+      "library/skills/24-spatial-upstream-measurement-error/GUIDE.md": "7e4d105c238fdc8fd0327586f76f1f8920f875293b5b2f14442fc49812fc0972",
+      "library/skills/25-optimal-transport-theory-and-numerics/GUIDE.md": "8a12353993a92c9147b61299883c638bc1b1d5dc242f6b7ad17318990c64d90c",
+      "library/skills/26-flow-matching-design-and-validation/GUIDE.md": "a2e6b24ad2153a744c31c9e078e0978144872f1ac7d45ef3ab10e400e72ad630",
+      "library/skills/27-supplement-to-code-reproduction/GUIDE.md": "4a87d49bd0e2e47e61bfa581fcb88cdcbb260ceb30d5a351ba584394f88d5976",
+      "library/skills/28-uncertainty-propagation-and-calibration/GUIDE.md": "2930f15cd744fe2ecae05a2e724655ac1fc9683bbd453f80a1c8ddb8c62e9464",
+      "library/templates/benchmark_protocol.yaml": "bee9db3cc3d0d37d1ceb9f3100bd8bf9ce4c4a05e3ebf1d6ebf3cf285a0f28cb",
+      "library/templates/claim_evidence.tsv": "f8a84613dcb59c942cdfbfe19c4bb4e0930b18eb9f927f121fb1618b63fd2395",
+      "library/templates/data_contract.yaml": "54d30d1273483bfac964afc6d6a251ba4ce8ad0a8be81bf4bbf72f8cf1b4dcfc",
+      "library/templates/label_provenance.tsv": "dcadbf6740e8ad9b1a0309dbdf922d26660397e3d8a85f1cd8756a39c9e77086",
+      "library/templates/question_card.md": "f4fdb9ecf99ffbed664d26e78d4d9f824d5128a9fb597c8b2269d39f7b84afe3",
+      "library/templates/reproduction_report.md": "d4481bffcfd3a684a5ecf18fe92a35a243b89ede7a6455c3678aa50abbb15bab",
+      "library/tests/test_numerics.py": "27f10d1bc53fed1b9995f5f6d2432b125c9a9dd5033a4977233e9a18714cd9c0",
+      "library/tests/test_package.py": "b35e8ee81ed90ff293eb9b5bd0dbdb460645862a568f8313c6dc90d9b2fd06e7",
+      "library/workflows/README.md": "9fdb62305b01917c0ce203ff722f10f4f14a1e2ebbb31b5f337684752b840386",
+      "library/workflows/__init__.py": "245cc5189bf92484e7154a6d8bcd599f59a8071af5dce956895c5597b69d0b8e",
+      "library/workflows/causal_contract.yaml": "b7f7cd15cceb105a474b046df735d262ad9959f51dbbb148a1b6f25173baf6cd",
+      "library/workflows/fm_contract.yaml": "0d7e8c15992dd499738414f55b7196255d12fb7ea1b0ac33b027f60750098b15",
+      "library/workflows/ot_contract.yaml": "a643eb4622615b6db706abbd375b854aeb5d9abfa77cbd2ee834666011f902c9",
+      "library/workflows/pseudobulk_edger.R": "4a3df22508318f6a6f51c5607c3c522c29c1379821a9717fe1338adb11ccb53e",
+      "library/workflows/reproduction_manifest.yaml": "3c10f62142be3d0b73910e6dc3251438c4503f1b3e4af9b1f0bec92f4d74a2a0",
+      "library/workflows/run_reproduction.py": "ea9687667eb541d727b46e78f768d58469dc017f7545faddcd98b690b3f23ed2",
+      "library/workflows/spatial_error.yaml": "a0dad9b9e331df606bf397a539d1e69aa049ce064ecc681c3061a8365c444416",
+      "library/workflows/statistical_design.yaml": "2509762f830c260e4e26c60647dc003d51511fdea3eb22ec01105491aa18d222",
+      "library/workflows/testing_family.yaml": "7053dc04769f18523a2f72ce5f21f4089f10b6a946787a3a9b1ff6a835bf9002",
+      "library/workflows/uncertainty_contract.yaml": "c247030f86ce8ad60d1733c1a48ad2c36ad396582e9f3aa2e2ff6a527bd52233"
+    },
+    "omics-robustness": {
+      "SKILL.md": "a91dbf593b82e9389d3bb2a53aed2e8783ff812655f45b70ccfd5000f5dda75b",
+      "agents/openai.yaml": "a92c10401f3fea3228e5985a1424449e2a5c6f30a12481206077db9ab69fa950"
+    },
+    "omics-skill-maintenance": {
+      "SKILL.md": "5b935121d9b013150e7e4802c32e6ab97f1af438cf62491317f7ef2ac3d04cab",
+      "agents/openai.yaml": "109981c46eddb3f9b07d8f331a907d6be9d8709bd6a20f1b17f638058a91bfa7"
+    },
+    "omics-spatial-qc": {
+      "SKILL.md": "96269cdff81db81674f0919652e7ff84605fa6879ae39fdeaf108fd9f3d0fdce",
+      "agents/openai.yaml": "a6bd0bac8e02a117f51a5df412f08d19bbe08edace96044c06a9c36b87054869"
+    },
+    "omics-statistics": {
+      "SKILL.md": "a6bb132bea0c94464bcf7440b2a5b2cd6e54749876da162606538158b329fc70",
+      "agents/openai.yaml": "921a73998629608b43a7a426cf84246e303dcd40f193ce2d3d90d5dab68925c3"
+    },
+    "omics-uncertainty": {
+      "SKILL.md": "cd088e5a0c1d14dc8b9c5cfd762656ecce13ae1398039c594471b59f47ed81b7",
+      "agents/openai.yaml": "9f8f8a410eabed9a07244ee5a9cdfec58ae0158b69b7c5d342f4bfb8120d6a1c"
+    }
+  }
+}

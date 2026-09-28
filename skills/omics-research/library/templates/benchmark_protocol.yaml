@@ -1,0 +1,32 @@
+status: unfilled_template
+primary_claim: null
+protocol_type: null # joint/transductive, reference_adaptation, inductive, etc.
+tracks:
+  information_matched:
+    allowed_inputs: []
+    allowed_labels: []
+    allowed_priors: []
+    allowed_reference: null
+  end_to_end:
+    report_all_extra_information: true
+    report_upstream_preprocessing: true
+splits:
+  independent_group: null
+  outer_split: null
+  tuning_split: null
+  spatial_overlap_policy: null
+baselines:
+  simple: []
+  nearest_prior_work: []
+  oracle_k_track: false
+metrics:
+  target_capability: []
+  biology_preservation: []
+  unwanted_variation: []
+  rare_or_unknown_states: []
+  resources: [wall_time, peak_memory, failures]
+acceptance:
+  prespecified_effect_or_noninferiority_margin: null
+  rationale: null
+  uncertainty_unit: null
+  disqualifying_failure_modes: []

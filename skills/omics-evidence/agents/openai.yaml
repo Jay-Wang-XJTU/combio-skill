@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 主张—证据与论文组织"
+  short_description: "组织 Results、选主图、写摘要或回应审稿时。"
+  default_prompt: "请使用 $omics-evidence 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

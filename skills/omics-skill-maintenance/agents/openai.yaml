@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | Skill 验收与知识更新"
+  short_description: "把文献归纳成 skill、更新规则或交给 agent 长期调用时。"
+  default_prompt: "请使用 $omics-skill-maintenance 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

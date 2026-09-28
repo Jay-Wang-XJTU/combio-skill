@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 整合、参考映射与配准分轨"
+  short_description: "跨样本、患者、平台整合或将新样本映射到 atlas 时。"
+  default_prompt: "请使用 $omics-integration 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

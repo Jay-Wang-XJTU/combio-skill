@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 观测模型与预处理兼容性"
+  short_description: "选 NB/Poisson/MSE、组合模态、训练生成模型或移植基线时。"
+  default_prompt: "请使用 $omics-preprocessing 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

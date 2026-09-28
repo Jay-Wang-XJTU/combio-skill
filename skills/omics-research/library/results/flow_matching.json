@@ -1,0 +1,15 @@
+{
+  "scope": "own 1D affine Gaussian CFM, not CellFlow or published biological replication",
+  "seed": 31415,
+  "device": "CPU",
+  "steps": 1500,
+  "initial_heldout_velocity_MSE": 3.981710433959961,
+  "final_heldout_velocity_MSE": 4.168682607996743e-06,
+  "paired_endpoint_RMSE": 0.0011198368877861726,
+  "empirical_1D_endpoint_W2": 0.0011198368877861726,
+  "endpoint_mean": 1.9644676784434236,
+  "endpoint_sd": 1.4710629136768643,
+  "RK4_40_vs_80_max_abs_difference": 6.655852047288136e-08,
+  "ground_truth": "known affine coupling x1=1.5*x0+2; normalized time, not biological units",
+  "seconds": 2.9281417999999917
+}

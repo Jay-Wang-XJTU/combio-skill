@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 通讯、网络与标签来源审计"
+  short_description: "LR 互作、基因网络、链接预测或通讯解释时。"
+  default_prompt: "请使用 $omics-communication 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

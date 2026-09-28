@@ -1,0 +1,10 @@
+{
+  "scope": "all-null independent Uniform(0,1); FDR equals P(any rejection)",
+  "seed": 820,
+  "repetitions": 6000,
+  "family_size": 100,
+  "postselection_single_test_rejection": 0.9946666666666667,
+  "full_family_BH_any_rejection": 0.049,
+  "independent_holdout_rejection": 0.05,
+  "seconds": 0.12458856500001048
+}

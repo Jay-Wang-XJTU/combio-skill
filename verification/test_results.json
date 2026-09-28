@@ -1,0 +1,26 @@
+{
+  "distribution_version": "0.2.1",
+  "knowledge_version": "0.2.0",
+  "environment": {
+    "os": "Linux",
+    "python": "3.13.5",
+    "git": "git version 2.47.3"
+  },
+  "command": "python -m unittest discover -s tests -v",
+  "tests_run": 30,
+  "passed": 30,
+  "failed": 0,
+  "skipped": 0,
+  "local_git_clone_install": "passed (temporary local origin; not GitHub)",
+  "package_structure": "29 public skills; 133 scientific-library files",
+  "npx_runtime": "not_run; npm metadata query timed out in packaging environment",
+  "github_authentication": "not_available_in_this_session",
+  "github_repository_created": false,
+  "github_source_pushed": false,
+  "github_release_uploaded": false,
+  "codex_runtime_loading_tested": false,
+  "plugin_runtime_tested": false,
+  "scientific_experiments_rerun": false,
+  "windows_runtime_tested": false,
+  "fixed_during_testing": "Normalize one TSV CRLF to LF to maintain hashes after Git checkout"
+}

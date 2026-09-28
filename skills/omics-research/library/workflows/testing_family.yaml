@@ -1,0 +1,20 @@
+schema_version: 1
+status: requires_project_values
+family_id: null
+scientific_question: null
+all_candidates_before_selection: null
+units: [] # genes / programs / fates / contrasts / scales
+valid_marginal_p_value_argument: null
+dependence_assumption: null
+correction: null # BH under justified dependence; BY for arbitrary dependence with valid p-values
+fdr_target: null
+selection_data: null
+testing_data_or_selective_procedure: null
+planned_exclusions: null
+posthoc_added_tests: []
+permutation:
+  scheme: null
+  draws: null
+  exhaustive: false
+  include_identity_or_plus_one_convention: null
+forbidden: correction_only_after_choosing_smallest_p_values

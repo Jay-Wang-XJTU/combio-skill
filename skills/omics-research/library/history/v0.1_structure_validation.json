@@ -1,0 +1,17 @@
+{
+  "validation_type": "static_structure_only",
+  "date": "2026-09-24",
+  "paper_cards": 20,
+  "skills": 20,
+  "behavior_cases": 22,
+  "reading_coverage": {
+    "abstract_plus_official_docs": 2,
+    "targeted_full_text": 17,
+    "abstract_plus_extended_captions": 1
+  },
+  "behavior_tests_executed": 0,
+  "paper_reproductions_executed": 0,
+  "broken_links_or_structure_errors": [],
+  "status": "pass",
+  "meaning": "Checks file existence, metadata and internal references only. Does not validate scientific conclusions or agent behavior."
+}

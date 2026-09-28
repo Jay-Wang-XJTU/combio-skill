@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 图语义、采样和信息传播"
+  short_description: "构造 GNN、跨切片图、异构图或子图编码器时。"
+  default_prompt: "请使用 $omics-graph 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

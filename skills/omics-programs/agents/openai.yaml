@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 可解释程序、语义对齐与证据"
+  short_description: "基因程序 latent、masked decoder、gene-set priors 或 driver 排名时。"
+  default_prompt: "请使用 $omics-programs 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 稳定性、可识别性与误差来源"
+  short_description: "多 seed 不一致、解释易变或准备报告稳健性时。"
+  default_prompt: "请使用 $omics-robustness 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

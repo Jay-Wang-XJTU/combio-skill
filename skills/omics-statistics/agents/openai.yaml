@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 独立重复、分层切分与重采样"
+  short_description: "设计患者泛化、单细胞/空间差异检验、模型性能误差条或bootstrap时。"
+  default_prompt: "请使用 $omics-statistics 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,21 @@
+schema_version: 1
+status: requires_project_values
+estimand: null
+observation_unit: cell
+biological_replicate: donor
+nesting: [donor, sample, slide, fov, cell]
+paired_design: null
+condition_column: null
+batch_column: null
+split_unit: donor
+permutation_exchangeability_blocks: null
+model:
+  approach: null # raw-count pseudobulk NB / justified hierarchical model
+  formula: null
+  design_full_rank_required: true
+  residual_degrees_of_freedom_required: true
+cell_population_definition: null
+selection_independence_or_selective_inference: null
+minimum_cells_per_pseudobulk: null # justify per dataset, not universal threshold
+missing_population_policy: exclude_with_reason_not_zero_expression
+cell_abundance_analysis_is_separate: true

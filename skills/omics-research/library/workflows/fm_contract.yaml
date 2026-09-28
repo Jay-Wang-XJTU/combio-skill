@@ -1,0 +1,24 @@
+schema_version: 1
+status: requires_project_values
+source_distribution: null
+target_distribution: null
+endpoint_coupling: null # independent / full-data OT / minibatch OT / normalized UOT
+conditional_path:
+  alpha: t
+  sigma: 1-t
+  derivative_target: x1-x0
+  noise_schedule: none
+  time_sampling: Uniform(0,1)
+# 上述只是线性无噪路径示例，不是所有FM任务默认正确设定。
+vector_field_inputs: [x_t, t]
+normalization_and_inverse_transform: null
+training_split_unit: donor
+minibatch_pairing_changes_problem: null
+ode:
+  solver: null
+  time_interval: [0, 1]
+  step_or_tolerances: null
+  convergence_comparison: null
+validation: [heldout_vector_field, endpoint_distribution, branch_coverage, solver_error, independent_biological_evidence]
+population_mass_model: none
+normalized_uot_does_not_add_birth_death: true

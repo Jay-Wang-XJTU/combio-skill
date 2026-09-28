@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 最小证伪实验与受控模拟"
+  short_description: "大规模训练前，或要判断新增模块是否必要时。"
+  default_prompt: "请使用 $omics-falsification 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

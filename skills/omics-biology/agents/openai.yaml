@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 生物学发现与验证梯度"
+  short_description: "从计算结果提出 marker、program、driver、niche 机制时。"
+  default_prompt: "请使用 $omics-biology 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

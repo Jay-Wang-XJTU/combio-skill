@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 信息匹配与端到端 benchmark"
+  short_description: "比较方法、组织 benchmark 或声明性能优越时。"
+  default_prompt: "请使用 $omics-benchmark 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

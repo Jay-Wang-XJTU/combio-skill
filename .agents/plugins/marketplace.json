@@ -1,0 +1,20 @@
+{
+  "name": "omics-research-local",
+  "interface": {
+    "displayName": "Omics Research Skills"
+  },
+  "plugins": [
+    {
+      "name": "omics-method-research",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

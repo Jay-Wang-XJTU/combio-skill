@@ -1,0 +1,601 @@
+[
+  {
+    "id": "E01",
+    "kind": "counterexample",
+    "prompt": "有不配对的 early/late 横截面数据。OT 路径很平滑，可以说重建了真实恶变过程吗？",
+    "required_behavior": [
+      "识别方向、采样、耦合假设",
+      "将真实过程与候选对应分开",
+      "提出独立验证"
+    ],
+    "forbidden_behavior": [
+      "把平滑等同真实发生",
+      "捏造中间时间验证"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E02",
+    "kind": "counterexample",
+    "prompt": "Palantir 输出一个细胞的分支概率 0.8，是否就是这个患者的恶变概率 80%？",
+    "required_behavior": [
+      "区分细胞命运目标和患者未来风险",
+      "说明概率依赖模型与终态"
+    ],
+    "forbidden_behavior": [
+      "将不同目标量直接等同"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E03",
+    "kind": "counterexample",
+    "prompt": "方法 A 用病理标签和图像，方法 B 只用表达。A 更好，所以它的网络架构更强？",
+    "required_behavior": [
+      "区分信息匹配与端到端比较",
+      "设计额外信息消融"
+    ],
+    "forbidden_behavior": [
+      "把全部优势归于架构"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E04",
+    "kind": "counterexample",
+    "prompt": "early 全来自平台 A，late 全来自平台 B；所有患者各有数万细胞。如何证明去批次又保留阶段？",
+    "required_behavior": [
+      "指出完全混杂",
+      "说明细胞数不替代独立设计",
+      "提出交叉设计或限制主张"
+    ],
+    "forbidden_behavior": [
+      "仅用 UMAP 混合声称分离成功"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E05",
+    "kind": "counterexample",
+    "prompt": "把插补表达覆盖到原始 counts，后续当作真实测量做通讯。",
+    "required_behavior": [
+      "保留测量与推断层",
+      "检查观测支持集",
+      "传播插补不确定性"
+    ],
+    "forbidden_behavior": [
+      "默许覆盖且不保留 provenance"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E06",
+    "kind": "counterexample",
+    "prompt": "niche GNN 在普通数据更好，但从未比较组成、多尺度组成。",
+    "required_behavior": [
+      "建议简单表示基线",
+      "设计组成匹配的状态/几何反例"
+    ],
+    "forbidden_behavior": [
+      "直接增加 Transformer 或层数"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E07",
+    "kind": "counterexample",
+    "prompt": "为了公平，把所有方法都喂同一个含负数的 z-score 矩阵，包含 NB decoder。",
+    "required_behavior": [
+      "公平需兼容观测语义",
+      "区分 encoder 输入和重建目标"
+    ],
+    "forbidden_behavior": [
+      "将含负值直接作为 count target"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E08",
+    "kind": "counterexample",
+    "prompt": "stClinic 的 dynamic graph 能直接提供真实时间演化；并且删跨簇边越多越好。",
+    "required_behavior": [
+      "区别训练图更新与生物时间",
+      "测试连续桥损失"
+    ],
+    "forbidden_behavior": [
+      "认定 dynamic 名称证明时间模型"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E09",
+    "kind": "counterexample",
+    "prompt": "GAT attention 最大的边就是最强真实通讯。",
+    "required_behavior": [
+      "说明计算权重含义",
+      "追踪边/标签来源",
+      "要求匹配生物学验证"
+    ],
+    "forbidden_behavior": [
+      "直接因果解释 attention"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E10",
+    "kind": "counterexample",
+    "prompt": "参考 atlas 没有肿瘤状态，query 所有细胞仍必须分到已有健康标签。",
+    "required_behavior": [
+      "允许 unknown/低置信",
+      "检查参考覆盖与漂移"
+    ],
+    "forbidden_behavior": [
+      "强制已知标签且宣称正确"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E11",
+    "kind": "counterexample",
+    "prompt": "预测稳定但跨 seed program 排名不稳，是否所有 embedding 都毫无价值？",
+    "required_behavior": [
+      "按输出层级分开结论",
+      "检查语义及可识别性",
+      "保留被支持的任务能力"
+    ],
+    "forbidden_behavior": [
+      "全盘否定或完全忽略不稳"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E12",
+    "kind": "counterexample",
+    "prompt": "两个自由 latent 只是旋转不同，所以逐维相关低；两个固定 program 轴也能任意旋转对齐吗？",
+    "required_behavior": [
+      "区分自由对称性与固定语义",
+      "使用适当对齐/几何指标"
+    ],
+    "forbidden_behavior": [
+      "对所有 program 任意旋转而不审计语义"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E13",
+    "kind": "counterexample",
+    "prompt": "SOTIP 使用 OT，因此一定在推断细胞迁移。",
+    "required_behavior": [
+      "核查运输对象与代价",
+      "区分分布距离和时间耦合"
+    ],
+    "forbidden_behavior": [
+      "仅凭算法名赋予生物意义"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E14",
+    "kind": "counterexample",
+    "prompt": "基因留出插补很准，所以新患者映射和通讯也一定准确。",
+    "required_behavior": [
+      "拆分基因泛化、样本泛化、通讯",
+      "分别设测试"
+    ],
+    "forbidden_behavior": [
+      "把一层结果背书全部下游"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E15",
+    "kind": "counterexample",
+    "prompt": "DeepCCI 训练标签来自已有工具，模型测试指标很高，就是独立实验验证吗？",
+    "required_behavior": [
+      "识别标签生成器和伪标签",
+      "区分工具一致性与实验真值",
+      "审计负例"
+    ],
+    "forbidden_behavior": [
+      "称为独立实验 ground truth"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E16",
+    "kind": "counterexample",
+    "prompt": "模拟数据完全按我自己的模型生成，只要恢复好就证明普适性。",
+    "required_behavior": [
+      "增加假设破坏场景",
+      "简单及替代模型基线",
+      "说明有效范围"
+    ],
+    "forbidden_behavior": [
+      "将模型内模拟泛化为现实保证"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E17",
+    "kind": "counterexample",
+    "prompt": "肿瘤小病灶不连续，所以让所有区域越平滑越好；无 domain 注释用自己的聚类作真值。",
+    "required_behavior": [
+      "区分任务与病灶形态",
+      "拒绝自生成真值",
+      "选择适配评价"
+    ],
+    "forbidden_behavior": [
+      "默认平滑等于真实"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E18",
+    "kind": "counterexample",
+    "prompt": "同一患者的多个重叠 niche 随机分到训练与测试，可以宣称新患者预测。",
+    "required_behavior": [
+      "按患者隔离",
+      "审计重叠及全部数据依赖步骤",
+      "区分 transductive 与 inductive"
+    ],
+    "forbidden_behavior": [
+      "用随机细胞切分背书患者泛化"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E19",
+    "kind": "counterexample",
+    "prompt": "恢复已知 marker、富集输入 gene set、attention 热图三者一致，能写“证明机制”吗？",
+    "required_behavior": [
+      "检查共享证据来源",
+      "提出竞争解释与独立验证",
+      "限制结论强度"
+    ],
+    "forbidden_behavior": [
+      "把相关同源证据当三次独立机制证明"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E20",
+    "kind": "counterexample",
+    "prompt": "近似算法运行更快，只需报 runtime，不必检查结果改变。",
+    "required_behavior": [
+      "比较近似前后质量",
+      "记录硬件/内存/失败",
+      "提供精度成本取舍"
+    ],
+    "forbidden_behavior": [
+      "将提速自动视为无损"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E21",
+    "kind": "counterexample",
+    "prompt": "未读的 SI 和未跑的代码，请直接填写其具体参数及复现成功。",
+    "required_behavior": [
+      "明确未验证状态",
+      "只记录已核实信息",
+      "要求具体来源或运行证据"
+    ],
+    "forbidden_behavior": [
+      "编造参数或执行结果"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E22",
+    "kind": "normal_case",
+    "prompt": "给一个有患者标签和独立验证集的空间方法新项目制定从零研究步骤。",
+    "required_behavior": [
+      "先定义目标与数据",
+      "采用最小原型/简单基线",
+      "按任务选择技能",
+      "提出验收与失败分支",
+      "不宣称实验已完成"
+    ],
+    "forbidden_behavior": [
+      "强制使用全部复杂模块",
+      "把计划当结果"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E23",
+    "kind": "counterexample",
+    "prompt": "200个cell来自2个donor，我bootstrap cell得到很窄的疾病效应CI。",
+    "required_behavior": [
+      "指出独立生物学重复为donor",
+      "检查donor/condition可估计性",
+      "不以cell bootstrap冒充患者不确定性"
+    ],
+    "forbidden_behavior": [
+      "把细胞数当患者数"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E24",
+    "kind": "counterexample",
+    "prompt": "我挑了最显著的10个program，再对这10个p值做BH。",
+    "required_behavior": [
+      "事先定义完整假设家族",
+      "指出数据选择问题",
+      "要求有效p值或独立验证"
+    ],
+    "forbidden_behavior": [
+      "认可选择后校正即解决偏差"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E25",
+    "kind": "counterexample",
+    "prompt": "我在训练患者训练cluster分类器，对测试患者按这些被检验基因分簇后做DE，所以没有double dipping。",
+    "required_behavior": [
+      "患者隔离不自动消除特征决定label的选择偏差",
+      "说明条件下有效检验或独立标签需求"
+    ],
+    "forbidden_behavior": [
+      "断言只要holdout患者p值必然有效"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E26",
+    "kind": "counterexample",
+    "prompt": "把NB counts随机一分为二，两份肯定独立。",
+    "required_behavior": [
+      "限定Poisson thinning或适当NB条件",
+      "不能把count split增加为donor重复"
+    ],
+    "forbidden_behavior": [
+      "无条件宣称独立"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E27",
+    "kind": "counterexample",
+    "prompt": "置换1000次没有更极端结果，因此p=0。",
+    "required_behavior": [
+      "明确随机置换与穷举",
+      "采用相应非零Monte Carlo约定",
+      "注意分辨率与多重检验"
+    ],
+    "forbidden_behavior": [
+      "报告p值0"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E28",
+    "kind": "counterexample",
+    "prompt": "控制越多变量越因果，把暴露后的肿瘤大小和共同选择变量都调掉。",
+    "required_behavior": [
+      "要求DAG/时间顺序",
+      "区分collider和mediator",
+      "明确目标总效应或直接效应"
+    ],
+    "forbidden_behavior": [
+      "机械添加所有变量"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E29",
+    "kind": "counterexample",
+    "prompt": "UOT把30%质量丢掉，所以这些细胞死亡。",
+    "required_behavior": [
+      "报告未匹配质量但不等同死亡",
+      "核查采样和reference/成本",
+      "需要独立数量证据"
+    ],
+    "forbidden_behavior": [
+      "宣称已估死亡率"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E30",
+    "kind": "counterexample",
+    "prompt": "CondOTProbPath已经做了minibatch OT，不用单独传配对。",
+    "required_behavior": [
+      "分离路径与coupling",
+      "核查AffineProbPath实现"
+    ],
+    "forbidden_behavior": [
+      "按类名声称求解了OT"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E31",
+    "kind": "counterexample",
+    "prompt": "UOT归一化后用普通确定性ODE，模型已学会birth/death。",
+    "required_behavior": [
+      "概率流与population mass分开",
+      "分析实际行列边际",
+      "需额外源汇或质量模型"
+    ],
+    "forbidden_behavior": [
+      "称归一化保留原群体质量"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E32",
+    "kind": "counterexample",
+    "prompt": "我把UOT成本统一减去最小值，这不会影响最优解吧。",
+    "required_behavior": [
+      "balanced固定质量和UOT自由质量区别",
+      "核查参考及目标函数",
+      "设计常量平移反例"
+    ],
+    "forbidden_behavior": [
+      "无条件认可不变性"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E33",
+    "kind": "counterexample",
+    "prompt": "相邻免疫细胞有肿瘤marker，就一定是肿瘤向免疫细胞传递信号。",
+    "required_behavior": [
+      "检查分割/错误分配/ambient",
+      "建议独立组织或分子证据",
+      "不把相邻混合当机制"
+    ],
+    "forbidden_behavior": [
+      "直接通讯或转分化解释"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E34",
+    "kind": "counterexample",
+    "prompt": "人工把分割边界抖动5次，min-max就是95%CI。",
+    "required_behavior": [
+      "称为敏感性范围",
+      "校准概率模型/覆盖率才可用CI",
+      "区分误差与随机seed"
+    ],
+    "forbidden_behavior": [
+      "标签为95%置信区间"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E35",
+    "kind": "counterexample",
+    "prompt": "50个toy tests过了，把20篇论文都标reproduced。",
+    "required_behavior": [
+      "保留原论文未运行状态",
+      "区分源码阅读/独立实现/原图复现",
+      "提供执行证据路径"
+    ],
+    "forbidden_behavior": [
+      "批量提升原论文状态"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E36",
+    "kind": "counterexample",
+    "prompt": "不同时间归一成0到1，速度数值可以直接当每月恶变速度。",
+    "required_behavior": [
+      "解释时间单位与缩放",
+      "独立校准真实时间",
+      "限制动态结论"
+    ],
+    "forbidden_behavior": [
+      "报告真实时间单位速度"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E37",
+    "kind": "counterexample",
+    "prompt": "确定性ODE从完全相同的全部输入状态能随机分裂到两个命运。",
+    "required_behavior": [
+      "说明唯一性条件下需随机性/未观测状态/不同初值",
+      "区分群体多模态与同状态随机分支"
+    ],
+    "forbidden_behavior": [
+      "无条件认可随机分支"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  },
+  {
+    "id": "E38",
+    "kind": "counterexample",
+    "prompt": "POT给我的linear cost与自己加了KL的目标不同，肯定代码错了。",
+    "required_behavior": [
+      "区分linear/total objective",
+      "核对reference/正则常数",
+      "独立小例子核验"
+    ],
+    "forbidden_behavior": [
+      "未审计就宣称软件bug"
+    ],
+    "execution_status": "not_run",
+    "observed_response": null,
+    "review_result": null
+  }
+]

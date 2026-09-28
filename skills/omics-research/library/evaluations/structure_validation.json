@@ -1,0 +1,8 @@
+{
+  "release": "0.2.0",
+  "structure_validated": true,
+  "validation_source": "tests/test_package.py",
+  "numeric_and_structure_summary": "../results/validation_summary.json",
+  "agent_behavior_validated": false,
+  "scientific_correctness_globally_validated": false
+}

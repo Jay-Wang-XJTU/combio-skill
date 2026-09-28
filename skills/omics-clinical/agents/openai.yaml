@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 统计单位与临床验证协议"
+  short_description: "患者分期、生存、治疗响应或样本差异分析时。"
+  default_prompt: "请使用 $omics-clinical 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

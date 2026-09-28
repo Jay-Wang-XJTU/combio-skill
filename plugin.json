@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "omics-method-research",
+  "version": "0.2.1",
+  "description": "Evidence-aware single-cell and spatial omics research workflows."
+}

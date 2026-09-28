@@ -1,0 +1,27 @@
+schema_version: 1
+status: requires_project_values
+support_semantics: null
+source_mass_and_sampling_population: null
+target_mass_and_sampling_population: null
+problem: null # balanced / UOT / partial / semi-relaxed / GW
+cost_terms_and_units: null
+cost_scale_and_reference: null
+regularization:
+  epsilon: null
+  rho_source: null
+  rho_target: null
+  entropy_convention: null # KL(plan|a outer b) vs KL(plan|ones)
+solver:
+  package_version_or_commit: null
+  dtype: float64
+  max_iterations: null
+  convergence_residuals: [marginals_or_first_order, objective, finite_values]
+  tolerance: null
+zero_support_and_forbidden_edges: null
+reported_cost: both_linear_and_full_objective
+sensitivity: [epsilon, rho, cost_scaling, reference_measure, sampling_weights]
+flow_pair_sampling:
+  normalize_plan: null
+  actual_source_marginal: null
+  actual_target_marginal: null
+unmatched_mass_interpretation: unknown_without_independent_population_evidence

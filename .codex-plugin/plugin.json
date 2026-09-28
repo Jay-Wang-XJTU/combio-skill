@@ -1,0 +1,6 @@
+{
+  "name": "omics-method-research",
+  "version": "0.2.1",
+  "description": "Single-cell and spatial omics research workflow skills.",
+  "skills": "./skills/"
+}

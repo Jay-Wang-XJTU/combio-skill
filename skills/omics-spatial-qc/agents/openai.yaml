@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 空间测量链与上游误差审计"
+  short_description: "构造空间图、发现罕见混合状态/界面生态位、比较分割或推断通讯前。"
+  default_prompt: "请使用 $omics-spatial-qc 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

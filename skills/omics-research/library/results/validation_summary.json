@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-28",
+  "tests": 64,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "numerical_tests": 50,
+  "package_contract_and_executor_tests": 14,
+  "executed_notebooks": 6,
+  "synthetic_experiments": 6,
+  "agent_behavior_cases": 38,
+  "agent_behavior_cases_run": 0,
+  "original_paper_reproductions": 0,
+  "meaning": "Code/structure QA only; not original-paper or agent-behavior validation"
+}

@@ -1,0 +1,14 @@
+schema_version: 1
+status: requires_project_values
+prediction_target_and_population: null
+measurement_uncertainty_model: null
+outer_resampling_unit: donor
+inner_algorithm_seeds: null
+structural_scenarios: []
+retrain_inside_outer_resample: null
+computational_budget_and_approximations: null
+calibration_data_independent_of_training: null
+coverage_metric: null
+label_if_uncalibrated: sensitivity_range
+single_draws_and_metadata_to_retain: null
+report_separately: [measurement, sampling, algorithmic, structural]

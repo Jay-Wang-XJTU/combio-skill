@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 研究缺口与先例核查"
+  short_description: "声称创新、选 baseline 或命名新任务前。"
+  default_prompt: "请使用 $omics-literature 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

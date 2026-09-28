@@ -1,0 +1,191 @@
+{
+  "NicheCompass": {
+    "total_pdf_pages": 44,
+    "page_numbering": "physical 1-based, not printed S labels",
+    "pages": [
+      {
+        "page": 1,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 2,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 3,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 4,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 5,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 6,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 7,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 8,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 9,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 10,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 11,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 12,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 13,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 14,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 15,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 16,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 17,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 18,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 19,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 20,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 21,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 22,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 23,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 24,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 25,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 26,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 27,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 28,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 29,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 30,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 31,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 32,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 33,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 34,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 35,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 36,
+        "status": "figure_inspected"
+      },
+      {
+        "page": 37,
+        "status": "table_read_and_screenshot"
+      },
+      {
+        "page": 38,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 39,
+        "status": "notes_read_and_screenshot"
+      },
+      {
+        "page": 40,
+        "status": "not_individually_audited"
+      },
+      {
+        "page": 41,
+        "status": "targeted_methods_read_and_screenshot"
+      },
+      {
+        "page": 42,
+        "status": "targeted_methods_read_and_screenshot"
+      },
+      {
+        "page": 43,
+        "status": "targeted_methods_read_and_screenshot"
+      },
+      {
+        "page": 44,
+        "status": "not_individually_audited"
+      }
+    ],
+    "full_pdf_read": false,
+    "all_supplementary_files_read": false
+  },
+  "stClinic": {
+    "status": "link_access_failed",
+    "full_pdf_read": false
+  },
+  "other_original_papers": "No full-SI promotion in this release"
+}

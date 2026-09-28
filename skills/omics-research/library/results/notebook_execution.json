@@ -1,0 +1,38 @@
+[
+  {
+    "file": "notebooks/01_independent_replicates.ipynb",
+    "status": "executed_without_error",
+    "code_cells": 3,
+    "seconds": 2.6859500408172607
+  },
+  {
+    "file": "notebooks/02_multiple_testing.ipynb",
+    "status": "executed_without_error",
+    "code_cells": 3,
+    "seconds": 2.1566216945648193
+  },
+  {
+    "file": "notebooks/03_causal_identification.ipynb",
+    "status": "executed_without_error",
+    "code_cells": 3,
+    "seconds": 2.137568950653076
+  },
+  {
+    "file": "notebooks/04_spatial_error.ipynb",
+    "status": "executed_without_error",
+    "code_cells": 3,
+    "seconds": 1.9599974155426025
+  },
+  {
+    "file": "notebooks/05_optimal_transport.ipynb",
+    "status": "executed_without_error",
+    "code_cells": 3,
+    "seconds": 1.5827891826629639
+  },
+  {
+    "file": "notebooks/06_flow_matching.ipynb",
+    "status": "executed_without_error",
+    "code_cells": 3,
+    "seconds": 4.6255271434783936
+  }
+]

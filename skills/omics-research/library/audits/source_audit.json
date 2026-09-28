@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-28",
+  "scope": "web-rendered targeted source/SI review; no upstream package execution",
+  "entries": [
+    {
+      "id": "A01",
+      "source_ids": [
+        "G19",
+        "G20"
+      ],
+      "subject": "NicheCompass SI and archived implementation entry",
+      "locator": "SI physical pages 41–43, especially Methods training/benchmark definitions; Figure on physical p36 inspected",
+      "findings": [
+        "SI区分Gaussian posterior comparison与常规频率学p值；不得套用p值解释。",
+        "报告Adam训练设置、早停及具体模拟/benchmark参数；这些是该论文实验协议，不是所有数据默认推荐。",
+        "模拟部分使用真值数量选择top programs；这属于模拟评价协议，不能在真实未知数据中借用真值。",
+        "CAS等置换方案与具体空间假设有关；不能当作患者级疾病效应检验。",
+        "综合得分的归一化与类别加权需保留完整定义，不能把其数值阈值视为普适准入标准。"
+      ],
+      "archives": {
+        "software": "https://doi.org/10.5281/zenodo.14621258",
+        "paper_analysis": "https://doi.org/10.5281/zenodo.14632687"
+      },
+      "full_supplement_read": false,
+      "runtime_executed": false,
+      "source_commit": null
+    },
+    {
+      "id": "A02",
+      "source_ids": [
+        "G21"
+      ],
+      "subject": "stClinic article and code availability",
+      "locator": "Main article Methods, Discussion and Code availability",
+      "findings": [
+        "dynamic graph指训练图更新，不自动等于生物时间。",
+        "作者讨论跨簇边删除对连续结构的局限。",
+        "文章记录stClinic 0.0.10及相应依赖；archive与当前主分支不应默认为同版。"
+      ],
+      "archives": {
+        "paper_code": "https://zenodo.org/records/15246396"
+      },
+      "full_supplement_read": false,
+      "runtime_executed": false,
+      "source_commit": null
+    },
+    {
+      "id": "A03",
+      "source_ids": [
+        "G17",
+        "G18"
+      ],
+      "subject": "POT unbalanced Sinkhorn API and rendered implementation",
+      "locator": "ot.unbalanced._sinkhorn, sinkhorn_knopp_unbalanced; default reg_type note and kernel/scaling updates",
+      "findings": [
+        "文档注明从0.9.5起默认reg_type由entropy变为kl；调用时显式指定。",
+        "KL默认参考c=a⊗b；entropy等价于相对ones的KL加上与计划无关的常数。",
+        "fi=rho/(rho+epsilon)，u=(a/(Kv))^fi，v=(b/(K.Tu))^fi；文档参数和更新式要一起核对。",
+        "返回linear cost不等于包含熵和边际惩罚的total objective。"
+      ],
+      "source_commit": null,
+      "version_note": "Web documentation snapshot; not a pinned installed distribution",
+      "runtime_executed": false,
+      "independent_implementation": "lab/transport.py; tested against SciPy rather than POT runtime"
+    },
+    {
+      "id": "A04",
+      "source_ids": [
+        "G25"
+      ],
+      "subject": "Meta flow_matching/path/affine.py",
+      "locator": "AffineProbPath.sample and CondOTProbPath constructor in main branch",
+      "findings": [
+        "x_t=sigma_t*x0+alpha_t*x1；dx_t使用调度函数导数。",
+        "CondOTProbPath定义alpha=t、sigma=1−t；它不计算端点OT coupling。",
+        "conditional path、endpoint pairing与ODE solver必须分别配置。"
+      ],
+      "source_commit": null,
+      "version_note": "Mutable main branch read via web; source not vendored",
+      "runtime_executed": false,
+      "independent_implementation": "lab/flow.py; not official package execution"
+    }
+  ]
+}

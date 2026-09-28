@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 论文—代码—结果三方审计"
+  short_description: "移植模型、复现 baseline、确认论文实现或发布 skill 前。"
+  default_prompt: "请使用 $omics-code-audit 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

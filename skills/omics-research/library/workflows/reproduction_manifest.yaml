@@ -1,0 +1,17 @@
+schema_version: 1
+status: requires_project_values
+paper_id: null
+figure_panel: null
+upstream_version_or_commit: null
+working_directory: null
+# 每个输入必须预先取得，并记录sha256；不自动下载。
+inputs: [] # [{path: /absolute/path/data.h5ad, sha256: 64_hex_characters}]
+# argv而不是shell字符串；填写前先审查原仓库是否可信。
+command: [] # [python, reproduce_panel.py, --config, configs/panel.yaml]
+expected_outputs: [] # [/absolute/path/result.tsv]
+timeout_seconds: 3600
+acceptance:
+  metric: null
+  target_or_tolerance: null
+  rationale: null
+# 指标验收需独立人工/项目脚本判断。退出码0不等于原图已复现。

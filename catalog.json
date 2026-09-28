@@ -1,0 +1,413 @@
+{
+  "distribution_version": "0.2.1",
+  "knowledge_version": "0.2.0",
+  "profiles": {
+    "all": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "router": [],
+    "design": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      12,
+      17
+    ],
+    "spatial": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      10,
+      11,
+      13,
+      24,
+      28
+    ],
+    "dynamics": [
+      3,
+      9,
+      12,
+      14,
+      23,
+      25,
+      26,
+      28
+    ],
+    "statistics": [
+      3,
+      13,
+      14,
+      15,
+      21,
+      22,
+      23,
+      28
+    ],
+    "reproduction": [
+      5,
+      13,
+      17,
+      19,
+      20,
+      27
+    ],
+    "writing": [
+      2,
+      16,
+      18,
+      22,
+      23
+    ]
+  },
+  "skills": {
+    "omics-research": {
+      "id": 0,
+      "name": "omics-research",
+      "source": "GUIDE.md",
+      "original_name": "omics-method-research-router",
+      "title": "组学方法研究总路由",
+      "description": "单细胞与空间组学方法课题的总路由；定题到验证的跨阶段任务，按需选择子技能。",
+      "requires": []
+    },
+    "omics-question": {
+      "id": 1,
+      "name": "omics-question",
+      "source": "skills/01-question-and-estimand/GUIDE.md",
+      "original_name": "01-question-and-estimand",
+      "title": "科学问题与可检验目标",
+      "description": "提出新计算方法、项目启动或模型目标反复改变时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-literature": {
+      "id": 2,
+      "name": "omics-literature",
+      "source": "skills/02-literature-gap-and-prior-art/GUIDE.md",
+      "original_name": "02-literature-gap-and-prior-art",
+      "title": "研究缺口与先例核查",
+      "description": "声称创新、选 baseline 或命名新任务前。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-data": {
+      "id": 3,
+      "name": "omics-data",
+      "source": "skills/03-data-contract-and-feasibility/GUIDE.md",
+      "original_name": "03-data-contract-and-feasibility",
+      "title": "数据契约、覆盖与可行性",
+      "description": "找数据、下载、合并批次或设计 train/test 前。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-representation": {
+      "id": 4,
+      "name": "omics-representation",
+      "source": "skills/04-analysis-unit-and-representation/GUIDE.md",
+      "original_name": "04-analysis-unit-and-representation",
+      "title": "分析单位与多尺度表示",
+      "description": "选择 cell/metacell/niche 表示，或要证明超越细胞组成时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-preprocessing": {
+      "id": 5,
+      "name": "omics-preprocessing",
+      "source": "skills/05-observation-model-and-preprocessing/GUIDE.md",
+      "original_name": "05-observation-model-and-preprocessing",
+      "title": "观测模型与预处理兼容性",
+      "description": "选 NB/Poisson/MSE、组合模态、训练生成模型或移植基线时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-graph": {
+      "id": 6,
+      "name": "omics-graph",
+      "source": "skills/06-graph-and-message-passing-design/GUIDE.md",
+      "original_name": "06-graph-and-message-passing-design",
+      "title": "图语义、采样和信息传播",
+      "description": "构造 GNN、跨切片图、异构图或子图编码器时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-integration": {
+      "id": 7,
+      "name": "omics-integration",
+      "source": "skills/07-integration-and-reference-mapping/GUIDE.md",
+      "original_name": "07-integration-and-reference-mapping",
+      "title": "整合、参考映射与配准分轨",
+      "description": "跨样本、患者、平台整合或将新样本映射到 atlas 时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-programs": {
+      "id": 8,
+      "name": "omics-programs",
+      "source": "skills/08-interpretable-program-learning/GUIDE.md",
+      "original_name": "08-interpretable-program-learning",
+      "title": "可解释程序、语义对齐与证据",
+      "description": "基因程序 latent、masked decoder、gene-set priors 或 driver 排名时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-dynamics": {
+      "id": 9,
+      "name": "omics-dynamics",
+      "source": "skills/09-dynamics-fate-and-transport/GUIDE.md",
+      "original_name": "09-dynamics-fate-and-transport",
+      "title": "状态动态、命运与最优传输",
+      "description": "伪时间、命运推断、跨时间 OT 或连续状态建模时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-mapping": {
+      "id": 10,
+      "name": "omics-mapping",
+      "source": "skills/10-spatial-mapping-and-imputation/GUIDE.md",
+      "original_name": "10-spatial-mapping-and-imputation",
+      "title": "空间映射、插补与误差传递",
+      "description": "用 scRNA 补空间基因、spot 反卷积、推断单细胞空间上下文时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-communication": {
+      "id": 11,
+      "name": "omics-communication",
+      "source": "skills/11-communication-and-network-evidence/GUIDE.md",
+      "original_name": "11-communication-and-network-evidence",
+      "title": "通讯、网络与标签来源审计",
+      "description": "LR 互作、基因网络、链接预测或通讯解释时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-falsification": {
+      "id": 12,
+      "name": "omics-falsification",
+      "source": "skills/12-minimum-falsification-and-simulation/GUIDE.md",
+      "original_name": "12-minimum-falsification-and-simulation",
+      "title": "最小证伪实验与受控模拟",
+      "description": "大规模训练前，或要判断新增模块是否必要时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-benchmark": {
+      "id": 13,
+      "name": "omics-benchmark",
+      "source": "skills/13-information-matched-benchmarking/GUIDE.md",
+      "original_name": "13-information-matched-benchmarking",
+      "title": "信息匹配与端到端 benchmark",
+      "description": "比较方法、组织 benchmark 或声明性能优越时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-robustness": {
+      "id": 14,
+      "name": "omics-robustness",
+      "source": "skills/14-robustness-and-identifiability/GUIDE.md",
+      "original_name": "14-robustness-and-identifiability",
+      "title": "稳定性、可识别性与误差来源",
+      "description": "多 seed 不一致、解释易变或准备报告稳健性时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-clinical": {
+      "id": 15,
+      "name": "omics-clinical",
+      "source": "skills/15-statistical-and-clinical-validation/GUIDE.md",
+      "original_name": "15-statistical-and-clinical-validation",
+      "title": "统计单位与临床验证协议",
+      "description": "患者分期、生存、治疗响应或样本差异分析时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-biology": {
+      "id": 16,
+      "name": "omics-biology",
+      "source": "skills/16-biological-discovery-and-validation/GUIDE.md",
+      "original_name": "16-biological-discovery-and-validation",
+      "title": "生物学发现与验证梯度",
+      "description": "从计算结果提出 marker、program、driver、niche 机制时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-engineering": {
+      "id": 17,
+      "name": "omics-engineering",
+      "source": "skills/17-engineering-and-scaling/GUIDE.md",
+      "original_name": "17-engineering-and-scaling",
+      "title": "可复现工程与规模边界",
+      "description": "实现新方法、HPC 批量实验或声称可扩展时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-evidence": {
+      "id": 18,
+      "name": "omics-evidence",
+      "source": "skills/18-claim-evidence-and-paper-design/GUIDE.md",
+      "original_name": "18-claim-evidence-and-paper-design",
+      "title": "主张—证据与论文组织",
+      "description": "组织 Results、选主图、写摘要或回应审稿时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-code-audit": {
+      "id": 19,
+      "name": "omics-code-audit",
+      "source": "skills/19-source-code-reproduction-audit/GUIDE.md",
+      "original_name": "19-source-code-reproduction-audit",
+      "title": "论文—代码—结果三方审计",
+      "description": "移植模型、复现 baseline、确认论文实现或发布 skill 前。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-skill-maintenance": {
+      "id": 20,
+      "name": "omics-skill-maintenance",
+      "source": "skills/20-skill-evaluation-and-versioning/GUIDE.md",
+      "original_name": "20-skill-evaluation-and-versioning",
+      "title": "Skill 验收与知识更新",
+      "description": "把文献归纳成 skill、更新规则或交给 agent 长期调用时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-statistics": {
+      "id": 21,
+      "name": "omics-statistics",
+      "source": "skills/21-independent-replicates-and-resampling/GUIDE.md",
+      "original_name": "21-independent-replicates-and-resampling",
+      "title": "独立重复、分层切分与重采样",
+      "description": "设计患者泛化、单细胞/空间差异检验、模型性能误差条或bootstrap时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-multiple-testing": {
+      "id": 22,
+      "name": "omics-multiple-testing",
+      "source": "skills/22-multiple-testing-and-selective-inference/GUIDE.md",
+      "original_name": "22-multiple-testing-and-selective-inference",
+      "title": "多重检验与选择后推断",
+      "description": "报告显著gene/program/LR/niche、挑选driver、先聚类/拟合pseudotime再检验时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-causal": {
+      "id": 23,
+      "name": "omics-causal",
+      "source": "skills/23-causal-identification-and-perturbations/GUIDE.md",
+      "original_name": "23-causal-identification-and-perturbations",
+      "title": "因果识别、干预与机制证据",
+      "description": "声称driver、调控因果、反事实、干预效果或“恶变概率”时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-spatial-qc": {
+      "id": 24,
+      "name": "omics-spatial-qc",
+      "source": "skills/24-spatial-upstream-measurement-error/GUIDE.md",
+      "original_name": "24-spatial-upstream-measurement-error",
+      "title": "空间测量链与上游误差审计",
+      "description": "构造空间图、发现罕见混合状态/界面生态位、比较分割或推断通讯前。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-ot": {
+      "id": 25,
+      "name": "omics-ot",
+      "source": "skills/25-optimal-transport-theory-and-numerics/GUIDE.md",
+      "original_name": "25-optimal-transport-theory-and-numerics",
+      "title": "OT/UOT理论、数值与质量语义",
+      "description": "用OT做时间对应、整合、空间匹配或作为FM配对时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-flow-matching": {
+      "id": 26,
+      "name": "omics-flow-matching",
+      "source": "skills/26-flow-matching-design-and-validation/GUIDE.md",
+      "original_name": "26-flow-matching-design-and-validation",
+      "title": "Flow matching配对、路径与ODE验证",
+      "description": "从状态分布学习向量场、连接UOT与FM、解释轨迹/箭头/命运时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-reproduction": {
+      "id": 27,
+      "name": "omics-reproduction",
+      "source": "skills/27-supplement-to-code-reproduction/GUIDE.md",
+      "original_name": "27-supplement-to-code-reproduction",
+      "title": "补充材料到源码与原图复现",
+      "description": "把文献经验升级为具体实现、迁移算法或声称“已复现”时。",
+      "requires": [
+        "omics-research"
+      ]
+    },
+    "omics-uncertainty": {
+      "id": 28,
+      "name": "omics-uncertainty",
+      "source": "skills/28-uncertainty-propagation-and-calibration/GUIDE.md",
+      "original_name": "28-uncertainty-propagation-and-calibration",
+      "title": "分层不确定性、传播与校准",
+      "description": "整合多个模型/测量阶段、汇报置信区间、稳健性或恶变风险分数时。",
+      "requires": [
+        "omics-research"
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 科学问题与可检验目标"
+  short_description: "提出新计算方法、项目启动或模型目标反复改变时。"
+  default_prompt: "请使用 $omics-question 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

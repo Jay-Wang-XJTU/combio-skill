@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 可复现工程与规模边界"
+  short_description: "实现新方法、HPC 批量实验或声称可扩展时。"
+  default_prompt: "请使用 $omics-engineering 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

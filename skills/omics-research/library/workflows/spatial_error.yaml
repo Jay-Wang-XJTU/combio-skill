@@ -1,0 +1,16 @@
+schema_version: 1
+status: requires_project_values
+platform_and_pipeline_versions: null
+coordinate_units: null
+measured_vs_inferred_layers: null
+error_sources: [segmentation, transcript_assignment, ambient_or_bleed, coordinates, deconvolution_reference]
+independent_qc_or_truth: null
+perturbation_distribution_and_evidence: null
+# 情景范围不是自动校准的posterior，不填未测得的精确污染率。
+scenarios: []
+rebuild_graph_after_coordinate_or_segmentation_change: true
+recompute_niche_membership: true
+fixed_model_sensitivity: true
+retrain_selected_scenarios: null
+metrics: [graph_overlap, representation_change, ranking_change, biological_claim_change]
+output_label: sensitivity_envelope_unless_coverage_calibrated

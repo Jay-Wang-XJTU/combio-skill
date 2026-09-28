@@ -1,0 +1,788 @@
+[
+  {
+    "slug": "01-question-and-estimand",
+    "title": "科学问题与可检验目标",
+    "trigger": "提出新计算方法、项目启动或模型目标反复改变时。",
+    "inputs": "生物学问题；已知数据结构；预期用户；拟声称的结论。",
+    "steps": [
+      "把“更好的 embedding”改写为具体研究对象、使用场景与决策用途。",
+      "分开分析单位、观测单位、独立重复单位：例如 niche、spot、患者。",
+      "逐项记录可观测量、隐变量、目标量、方向先验及可证伪条件。",
+      "将主张标为描述、预测或机制解释；每类对应不同验证。",
+      "构造最强简单方案：若它足以回答问题，优先转为应用或限定方法改进，而非强行堆模型。"
+    ],
+    "branches": "数据只能支持横截面状态对应时，保留该目标并把真实时间/恶变概率列为待验证；确有独立随访再设计风险预测。",
+    "gate": "每个主要主张都能指向一个可执行测试、对照和数据来源；不能只指向 UMAP。",
+    "failure": "收缩主张、补采关键信息或改目标；不以增加网络容量替代不可识别性分析。",
+    "outputs": "question_card.md；claim_evidence.tsv 的初稿。",
+    "sources": [
+      "P2",
+      "P4",
+      "T3",
+      "T4"
+    ],
+    "tests": [
+      "E01",
+      "E02"
+    ]
+  },
+  {
+    "slug": "02-literature-gap-and-prior-art",
+    "title": "研究缺口与先例核查",
+    "trigger": "声称创新、选 baseline 或命名新任务前。",
+    "inputs": "候选贡献；代表论文、原始出版页、相关代码版本。",
+    "steps": [
+      "先核验作者与论文归属，记录 online year、issue year 和更正。",
+      "建立任务×输入信息×分析尺度×假设×输出×验证的对比矩阵。",
+      "作者自述的缺口标为待核查，阅读最接近工作的原始定义。",
+      "分别判断是新问题、新表示、新假设、新求解、新规模或新证据，而非仅换架构。",
+      "记录读到的确切章节；没有取得 SI/代码时，不填写确定的实现细节。"
+    ],
+    "branches": "已有方法任务不相同则不直接排性能榜；同任务但多用标签/图像的，转入信息匹配比较。",
+    "gate": "每项创新都有最近先例和可区分实验；不同贡献类型不互相替代。",
+    "failure": "调整定位或补读；冲突未解决时保留并列解释，不拼接成统一事实。",
+    "outputs": "prior_art_matrix.tsv；带读取层级的 paper_registry.json。",
+    "sources": [
+      "T6",
+      "Y4",
+      "Y2"
+    ],
+    "tests": [
+      "E03"
+    ]
+  },
+  {
+    "slug": "03-data-contract-and-feasibility",
+    "title": "数据契约、覆盖与可行性",
+    "trigger": "找数据、下载、合并批次或设计 train/test 前。",
+    "inputs": "表达与模态文件；患者/动物、样本、切片、FOV、平台、阶段、随访和标签信息。",
+    "steps": [
+      "建立 patient→sample→slide→FOV→cell/spot 的层级标识；保留原始 ID 与变换记录。",
+      "区分原始测量、归一化值、插补表达、推断坐标及参考标签。",
+      "列出设计混杂：例如所有 early 在平台 A、advanced 在 B；写明不可单独估计的效应。",
+      "审计基因 panel/同源映射/计数含义/空间单位/spot 混合/缺失模态。",
+      "为每个主张分配开发、比较、独立验证和生物学应用数据，记录访问限制。"
+    ],
+    "branches": "无患者 ID 时不能完成新患者泛化协议；无 domain 真值可做其他评价，但不把自生成簇视作真值。",
+    "gate": "输入语义可追溯，独立重复数量已知，主张与数据覆盖一致。",
+    "failure": "标记不能判断的字段；降低目标或补元数据；不悄悄将缺失病理当阴性。",
+    "outputs": "data_manifest.tsv；data_contract.yaml；confounding_report.md。",
+    "sources": [
+      "T6",
+      "T2",
+      "P4",
+      "J3"
+    ],
+    "tests": [
+      "E04",
+      "E05"
+    ]
+  },
+  {
+    "slug": "04-analysis-unit-and-representation",
+    "title": "分析单位与多尺度表示",
+    "trigger": "选择 cell/metacell/niche 表示，或要证明超越细胞组成时。",
+    "inputs": "科学目标；空间单位；输入分辨率；候选邻域定义与中心锚点。",
+    "steps": [
+      "明确表示代表中心细胞、邻域集合、子图还是样本；记录中心是否单独编码。",
+      "分解信息：中心状态、类型/状态组成、距离分层、协变、拓扑与先验互作。",
+      "同时实现与任务相关的简单比较：中心表达、组成、多尺度组成、邻域均值；必要时协变。",
+      "用物理半径、kNN、k-hop 时记录实际覆盖距离和细胞数分布。",
+      "重叠 niche 不作为新增患者；统计与数据切分记录共享细胞关系。"
+    ],
+    "branches": "目标只依赖组成时允许简单表示胜出；目标涉及状态/几何时设计组成匹配的区分测试。",
+    "gate": "表示保留的信息能对应目标，尺度敏感性已报告，收益不只来自聚合粒度变化。",
+    "failure": "调整尺度/表示或放弃无必要的复杂分支；不自动以更大 receptive field 解决一切。",
+    "outputs": "representation_contract.md；scale_audit.tsv；simple_baselines.yaml。",
+    "sources": [
+      "P2",
+      "P4",
+      "Y1",
+      "Y2"
+    ],
+    "tests": [
+      "E06"
+    ]
+  },
+  {
+    "slug": "05-observation-model-and-preprocessing",
+    "title": "观测模型与预处理兼容性",
+    "trigger": "选 NB/Poisson/MSE、组合模态、训练生成模型或移植基线时。",
+    "inputs": "每个输入层的数值语义、变换、采样技术、训练目标。",
+    "steps": [
+      "给矩阵标注 raw counts、log-normalized、scaled、proportions、binary 或 imputed。",
+      "为每个解码目标写出支持集和尺度；计数似然不直接重建含负数的标准化矩阵。",
+      "逐层列出编码输入与重建目标，两者可不同但须有理由。",
+      "记录库大小、检测率、离散度及技术协变量如何进入模型。",
+      "以按表达量/检测率分层的重建误差或预测检查评价，而不是只报总 loss。"
+    ],
+    "branches": "平台有不同观测过程时允许不同 likelihood；不得把某论文的默认分布推广为所有平台的真机制。",
+    "gate": "数据支持集、loss 与实现一致；不存在靠全零预测获得误导性高分的单一评价。",
+    "failure": "修复数据流或重建目标；检查 collapse、库大小支配、权重尺度，不能靠删零掩盖问题。",
+    "outputs": "tensor_schema.tsv；likelihood_audit.md；reconstruction_diagnostics.md。",
+    "sources": [
+      "T1",
+      "P4",
+      "T5",
+      "T6"
+    ],
+    "tests": [
+      "E07"
+    ]
+  },
+  {
+    "slug": "06-graph-and-message-passing-design",
+    "title": "图语义、采样和信息传播",
+    "trigger": "构造 GNN、跨切片图、异构图或子图编码器时。",
+    "inputs": "节点/边候选；坐标；表达表示；先验；训练和推断访问范围。",
+    "steps": [
+      "逐种边标注来源：物理邻接、表达相似、跨样本匹配、基因关联或候选 LR；不可混称通讯边。",
+      "写明有向性、权重、归一化、自环、边类型与不同层参数共享。",
+      "审计子图重叠、中心标记、边界截断、负采样、共享节点的多个表示如何使用。",
+      "比较无图/空间图/表达图/联合图，并检查消息传播是否消除目标差异。",
+      "动态删边记录每轮增删及其生物学区域；跨切片边不是物理距离边。"
+    ],
+    "branches": "任务要离散分区可测试边剪枝；任务要连续过渡必须检查桥接保留。归纳部署不得无说明访问测试标签或训练时不可得图结构。",
+    "gate": "每类边有可追溯语义和至少一项针对性反例；attention 不直接输出为物理通讯强度。",
+    "failure": "缩减边型、修复标签泄漏、保留连续桥；不能只用更清晰 UMAP 判断图正确。",
+    "outputs": "graph_contract.yaml；edge_audit.tsv；sampling_design.md。",
+    "sources": [
+      "C2",
+      "C3",
+      "J3",
+      "Y3"
+    ],
+    "tests": [
+      "E08",
+      "E09"
+    ]
+  },
+  {
+    "slug": "07-integration-and-reference-mapping",
+    "title": "整合、参考映射与配准分轨",
+    "trigger": "跨样本、患者、平台整合或将新样本映射到 atlas 时。",
+    "inputs": "需去除/保留的变量；训练/适配范围；参考覆盖；是否有解剖对应。",
+    "steps": [
+      "分别定义联合整合、参考映射、物理配准和时间对应，不共用模糊“alignment”。",
+      "列出必须保留的状态轴，特别是疾病阶段和样本特有群体。",
+      "若要未见患者泛化，在全部数据依赖步骤前设定分组切分；联合分析则明确 transductive。",
+      "报告同类内 batch mixing 与状态/稀有群体保留；类别之外连续信号单独评价。",
+      "新状态缺乏参考时允许 unknown/低置信输出，并量化适配造成的参考漂移。"
+    ],
+    "branches": "阶段与批次完全混杂时，不声称算法单独分离了二者；独立患者无空间同源结构时不强制配准。",
+    "gate": "去批次与保生物学均有证据，任务协议和部署假设一致。",
+    "failure": "降低整合强度或改为分层建模；补足设计；不要把所有样本混匀当唯一成功标准。",
+    "outputs": "integration_protocol.yaml；batch_biology_report.md；unknown_state_report.md。",
+    "sources": [
+      "T2",
+      "T6",
+      "Y3",
+      "C3"
+    ],
+    "tests": [
+      "E04",
+      "E08",
+      "E10"
+    ]
+  },
+  {
+    "slug": "08-interpretable-program-learning",
+    "title": "可解释程序、语义对齐与证据",
+    "trigger": "基因程序 latent、masked decoder、gene-set priors 或 driver 排名时。",
+    "inputs": "gene sets 及来源；重叠；decoder mask；cell type；各状态参数共享方案。",
+    "steps": [
+      "区分输入先验、模型定义分数、实际支持基因和外部生物学解释。",
+      "列出 hard mask、soft penalty、稀疏化、共享/特异程序分别限制什么；共享 decoder 不自动证明唯一可识别。",
+      "比较总重建贡献、类型内变异解释、跨状态比较和任务关联，不能互相代替。",
+      "开展先验基因留出/错配先验/去身份标记分析，分辨 target 与 regulator 支持。",
+      "跨 seed 比较前按模型对称性处理排列/缩放；有固定语义维度时核验语义，而非任意旋转成一致。"
+    ],
+    "branches": "无先验的 latent 重点评子空间/邻域；宣称 program 语义则必须在 program 层验收；driver 需额外证据。",
+    "gate": "解释对象、稳定粒度和证据来源清楚；重建、排名稳定和外部支持分别报告。",
+    "failure": "降级为程序相关表征或候选机制；检查冗余先验、不可识别、目标冲突和样本差异。",
+    "outputs": "program_dictionary.tsv；interpretability_audit.md；stability_by_object.tsv。",
+    "sources": [
+      "T5",
+      "P3",
+      "C1"
+    ],
+    "tests": [
+      "E11",
+      "E12"
+    ]
+  },
+  {
+    "slug": "09-dynamics-fate-and-transport",
+    "title": "状态动态、命运与最优传输",
+    "trigger": "伪时间、命运推断、跨时间 OT 或连续状态建模时。",
+    "inputs": "真实时间/velocity/谱系/根与终态信息；采样设计；候选代价和质量约束。",
+    "steps": [
+      "先记录方向来自观测还是设定；不能从无方向距离自动推出生物学时间。",
+      "分开核构建、命运求解、路径可视化和 driver 关联。",
+      "OT 显式写明被运输对象、代价、结构代价、熵正则与边缘质量约束。",
+      "用替代合理的 root、terminal、cost 和采样比例重算；检查无支撑对应与不连通分支。",
+      "质量不匹配同时考虑增殖/死亡和采样/检测差异，不能直接把全部质量解释成出生死亡。"
+    ],
+    "branches": "只有不配对 early/late 样本时输出条件于假设的对应或轨迹候选；有真实谱系/中间时间才能做额外验证。Flow matching 的定理及实现不在本轮核读范围。",
+    "gate": "方向与尺度的依据明确；关键结论不依赖唯一任意设定，或已报告其依赖。",
+    "failure": "报告多解/不可识别部分；退回状态相似或部分对应，不将生成的路径作为实测事实。",
+    "outputs": "dynamics_assumptions.yaml；coupling_sensitivity.md；fate_validation.md。",
+    "sources": [
+      "T1",
+      "P1",
+      "T3",
+      "T4",
+      "Y1"
+    ],
+    "tests": [
+      "E01",
+      "E02",
+      "E13"
+    ]
+  },
+  {
+    "slug": "10-spatial-mapping-and-imputation",
+    "title": "空间映射、插补与误差传递",
+    "trigger": "用 scRNA 补空间基因、spot 反卷积、推断单细胞空间上下文时。",
+    "inputs": "测量面板；参考；分辨率；已测坐标和推断位置；下游任务。",
+    "steps": [
+      "保存 observed/imputed 标签与原始计数，禁止覆盖真实测量而无记录。",
+      "区分共享基因重建、未测基因预测、细胞组成、环境预测和唯一坐标恢复。",
+      "做基因留出检验预测，再按独立样本/参考留出检验迁移；二者互不替代。",
+      "检查参考缺失细胞状态、相近表达不同环境、spot 混合和 panel 偏差。",
+      "对映射和插补不确定性重采样，重跑关键下游互作或风险结论。"
+    ],
+    "branches": "表达不能唯一确定环境时报告多个可能环境或不确定性；只有 spot 测量时不能直接称恢复了实测细胞位置。",
+    "gate": "每项输出都标明测量/预测及分辨率；下游结论在合理上游扰动下仍有支持。",
+    "failure": "缩小预测范围，恢复参考覆盖检查；限制为环境倾向而非精确定位。",
+    "outputs": "imputation_validation.md；provenance_layers.yaml；uncertainty_propagation.md。",
+    "sources": [
+      "P4",
+      "J3",
+      "T2"
+    ],
+    "tests": [
+      "E05",
+      "E14"
+    ]
+  },
+  {
+    "slug": "11-communication-and-network-evidence",
+    "title": "通讯、网络与标签来源审计",
+    "trigger": "LR 互作、基因网络、链接预测或通讯解释时。",
+    "inputs": "先验数据库版本；表达；空间信息；训练标签生成器；负例规则。",
+    "steps": [
+      "区分 LR 候选、统计共现、空间接近、模型链接和功能通讯证据。",
+      "逐项审计多亚基、方向、物种映射、检测率、分泌/接触作用范围。",
+      "标签若来自其他工具，目标标为学习该标签规则或共识；单独记录独立实验标签。",
+      "未标注链接不自动作为真实阴性；设计匹配的负例/背景并检查采样偏差。",
+      "比较简单 LR 分数、原标签生成器和上下文模型；分开定位精度和互作证据。"
+    ],
+    "branches": "只有表达和数据库时输出候选；加入独立受体/蛋白/响应证据可提高支持，但因果主张仍需相应干预设计。",
+    "gate": "主张与标签来源一致；不以同一数据库的重叠为独立验证。",
+    "failure": "重写结论、增设外部验证或改无/弱监督目标；不伪造真阴性。",
+    "outputs": "label_provenance.tsv；interaction_evidence.tsv；negative_sampling.md。",
+    "sources": [
+      "J2",
+      "J3",
+      "C1",
+      "C2",
+      "T5"
+    ],
+    "tests": [
+      "E09",
+      "E15"
+    ]
+  },
+  {
+    "slug": "12-minimum-falsification-and-simulation",
+    "title": "最小证伪实验与受控模拟",
+    "trigger": "大规模训练前，或要判断新增模块是否必要时。",
+    "inputs": "核心机制假说；预期成功/失败条件；简单基线。",
+    "steps": [
+      "一次只测试最核心的新能力，并给出能够推翻它的结果。",
+      "用表达状态、组成、空间排列、技术噪声等独立因素构造对照。",
+      "同时模拟假设成立和被破坏的情形；避免只按自家模型生成数据。",
+      "对拓扑或通讯置换保持与假说无关的条件，如度、组成、检测率或空间区域。",
+      "预先写明继续、简化、重构与暂不支持的判断标准；阈值绑定项目而非论文默认值。"
+    ],
+    "branches": "算法只需离散分区和需要连续梯度时采用不同反例；有真实干预或谱系数据优先补充而非只模拟。",
+    "gate": "简单基线和破坏性对照可运行，且检查确实针对目标机制，不只是优化 loss。",
+    "failure": "停止扩展无效模块；修正假设或数据要求；记录失败而非只保留最好 seed。",
+    "outputs": "minimal_experiment.yaml；simulation_factorial.tsv；go_no_go.md。",
+    "sources": [
+      "Y1",
+      "Y3",
+      "P3",
+      "T3"
+    ],
+    "tests": [
+      "E06",
+      "E16"
+    ]
+  },
+  {
+    "slug": "13-information-matched-benchmarking",
+    "title": "信息匹配与端到端 benchmark",
+    "trigger": "比较方法、组织 benchmark 或声明性能优越时。",
+    "inputs": "任务、数据、标签、各方法输入/输出约束、计算预算。",
+    "steps": [
+      "分两轨：相同信息的表示/算法比较；完整推荐流程的实际使用比较。",
+      "披露标签、病理、参考、先验、已知 K、外部预训练和适配步骤。",
+      "在语义兼容前提下控制预处理；不得把 count model 强行喂 scaled data。",
+      "固定下游评价器比较表示，并另报各方法完整流程；输出图/latent/矩阵要用适配指标。",
+      "多目标报告效应量、样本层级不确定性、资源和失败；调参仅用允许的数据。"
+    ],
+    "branches": "无可信 domain 标签时不计算伪真值准确率；已知 K 与未知 K 分开；不同任务不硬排综合榜。",
+    "gate": "所有主要优势均对应同任务、可比较信息和可追溯配置；不把单个权重总分当真理。",
+    "failure": "拆分比较组、补强简单基线或重新设计标签；不得隐去失败运行。",
+    "outputs": "benchmark_protocol.yaml；baseline_manifest.tsv；metric_contract.tsv。",
+    "sources": [
+      "T6",
+      "Y4",
+      "Y2",
+      "J1"
+    ],
+    "tests": [
+      "E03",
+      "E07",
+      "E17"
+    ]
+  },
+  {
+    "slug": "14-robustness-and-identifiability",
+    "title": "稳定性、可识别性与误差来源",
+    "trigger": "多 seed 不一致、解释易变或准备报告稳健性时。",
+    "inputs": "多次结果；样本层级；程序语义；上游步骤和超参数。",
+    "steps": [
+      "分别测优化随机性、细胞重采样、患者差异、先验扰动、panel/平台差异。",
+      "按声明对象测指标：任务输出、几何、概率、program 排名、driver 集合。",
+      "检查排列、旋转、缩放等模型对称性；先对齐合法自由度再比较，不能用对齐隐藏语义漂移。",
+      "重跑整个关键流程以传播上游不确定性；只固定 embedding 重训头不算全流程稳健。",
+      "区分观测不足、多解、优化失败和生物异质性；稳定性不能由单项指标替代。"
+    ],
+    "branches": "整体预测稳定但 driver 不稳定时只降低 driver 声明，不无依据否定全部模型；反向亦然。",
+    "gate": "报告每层稳定性及其对相应主张的影响，无“整体稳定”含混结论。",
+    "failure": "针对来源修复：约束/重设计、增加数据、改优化或分层解释；不盲目扩大 seed 数代替问题定位。",
+    "outputs": "stability_by_object.tsv；uncertainty_budget.md；failure_diagnosis.md。",
+    "sources": [
+      "P3",
+      "T5",
+      "P2",
+      "T3"
+    ],
+    "tests": [
+      "E11",
+      "E12"
+    ]
+  },
+  {
+    "slug": "15-statistical-and-clinical-validation",
+    "title": "统计单位与临床验证协议",
+    "trigger": "患者分期、生存、治疗响应或样本差异分析时。",
+    "inputs": "患者/切片层级；结局定义；事件/删失；协变量；训练与验证范围。",
+    "steps": [
+      "以主张对应的独立单位组织切分和不确定性；细胞数不能替代患者数。",
+      "患者分组外层评估，调参/特征选择/预处理适配限于协议允许范围。",
+      "比较已有临床变量、组成和简单聚合基线；检查分期/平台/治疗混杂。",
+      "明确随访起点和删失；风险分数的判别、校准、迁移及关联分开报告。",
+      "样本级 embedding 聚合若依赖 UMAP 坐标，另比较原始高维表征和多次投影稳定性。"
+    ],
+    "branches": "样本少或事件少时用更简单模型和探索性表述；横截面阶段分类不自动等于未来恶变预测。",
+    "gate": "验证单位、预测时间点与部署场景一致，且未用测试患者结果选择模型。",
+    "failure": "收缩临床主张；补验证队列或调整设计；不要把重复切片当独立患者。",
+    "outputs": "clinical_analysis_plan.md；patient_split_manifest.tsv；confounder_report.md。",
+    "sources": [
+      "C3",
+      "P3",
+      "P2",
+      "T6"
+    ],
+    "tests": [
+      "E04",
+      "E18"
+    ]
+  },
+  {
+    "slug": "16-biological-discovery-and-validation",
+    "title": "生物学发现与验证梯度",
+    "trigger": "从计算结果提出 marker、program、driver、niche 机制时。",
+    "inputs": "候选发现；输入先验；数据来源；可用独立样本、蛋白、谱系或干预。",
+    "steps": [
+      "区分恢复已知现象、发现新关联、预测新结局和解释机制。",
+      "为每个发现列出至少一个竞争解释，如组成、身份、深度、组织区域或平台。",
+      "独立验证优先不重复使用训练依据；保持目标问题与验证对象一致。",
+      "需要机制结论时联合实验设计，写明可区分竞争解释的操纵与读出。",
+      "记录阴性和不一致证据；生物学不支持时不靠更多富集图替代。"
+    ],
+    "branches": "方法性能主张不强制全部做湿实验；“驱动”或“通讯导致”则需要与该因果强度匹配的证据。",
+    "gate": "每项结论有证据等级、适用条件和未排除的解释；候选明确标为候选。",
+    "failure": "缩小为关联/预测结论、补充鉴别性实验或撤回局部解释。",
+    "outputs": "biological_claim_cards.md；validation_matrix.tsv；alternative_explanations.md。",
+    "sources": [
+      "T4",
+      "P3",
+      "T5",
+      "J2"
+    ],
+    "tests": [
+      "E15",
+      "E19"
+    ]
+  },
+  {
+    "slug": "17-engineering-and-scaling",
+    "title": "可复现工程与规模边界",
+    "trigger": "实现新方法、HPC 批量实验或声称可扩展时。",
+    "inputs": "数据规模、特征维数、图密度、目标硬件、软件约束与随机种子。",
+    "steps": [
+      "先实现小数据的参考版本与形状/数值断言，再优化。",
+      "显式估算所有细胞对、基因对、子图重复和距离矩阵成本，避免无意构造 dense N×N。",
+      "使用配置驱动数据/模型/训练/评价，保存切分、先验和缓存的哈希。",
+      "记录硬件、精度、线程、wall time、峰值内存及失败状态；不得只报成功案例。",
+      "比较近似/缓存/采样优化前后的目标指标、图邻域或耦合，而非只比较 runtime。"
+    ],
+    "branches": "近似改变结果时报告精度—成本权衡；现有库版本不能假定与论文一致。",
+    "gate": "同配置可追溯；小规模数值检查通过；规模曲线含质量与资源而非单条时间。",
+    "failure": "优先稀疏化或近似并验正确性；不要通过省略关键评价获得虚假提速。",
+    "outputs": "run_manifest.json；environment_lock；scaling_report.tsv；sanity_checks.md。",
+    "sources": [
+      "Y2",
+      "P4",
+      "T4",
+      "T6"
+    ],
+    "tests": [
+      "E20"
+    ]
+  },
+  {
+    "slug": "18-claim-evidence-and-paper-design",
+    "title": "主张—证据与论文组织",
+    "trigger": "组织 Results、选主图、写摘要或回应审稿时。",
+    "inputs": "主张清单；全部实验；失败/稳健性；来源和脚本。",
+    "steps": [
+      "每个主张对应数据、实验、对照、指标、统计单位和限定条件。",
+      "图的顺序按问题—方法—能力—生物学—边界组织，而不是按网络模块个数。",
+      "禁止把 UMAP、富集、预测、注意力同时作为同一机制的相互独立证据而不检查共享来源。",
+      "检查摘要结论是否超过最强独立证据；重复标签生成过程不算新增真值。",
+      "审稿材料仅作为具体质疑案例；未获取的材料不推测内容，发表不等于无局限。"
+    ],
+    "branches": "证据只支持局部或特定数据时在结论中保留范围；未完成实验列为缺口而非填补结果。",
+    "gate": "所有主要文字有可追踪产物和适当限定，不存在无实验支撑的关键 claim。",
+    "failure": "删改结论、补针对实验或降级证据等级，不能只改措辞掩盖缺口。",
+    "outputs": "claim_evidence.tsv；figure_plan.md；limitations.md。",
+    "sources": [
+      "T6",
+      "T4",
+      "P3",
+      "C3"
+    ],
+    "tests": [
+      "E19"
+    ]
+  },
+  {
+    "slug": "19-source-code-reproduction-audit",
+    "title": "论文—代码—结果三方审计",
+    "trigger": "移植模型、复现 baseline、确认论文实现或发布 skill 前。",
+    "inputs": "原文与补充方法；官方仓库；论文版本/commit；数据和配置。",
+    "steps": [
+      "固定源码来源和论文对应版本；记录 license 和访问限制，不混用 fork。",
+      "逐项比对预处理、loss、mask、梯度流、图构造、默认参数及训练/推断路径。",
+      "遇到 PDF 公式解析异常，检查原始图像与实现，不将排版损坏的公式写入代码。",
+      "先跑官方最小例，再复现一个核心图/表；区分可运行、数值近似和结论复现。",
+      "记录无法取得的数据、模型和依赖；当前文档新增功能不能倒推原论文已做。"
+    ],
+    "branches": "本知识包全部论文当前均未完成这一步；执行本 skill 后才可提高对应条目的审计等级。",
+    "gate": "审计日志包含具体版本、命令、输出及差异；没有执行证据就保持未验证。",
+    "failure": "将实现差异交由明确的选择分支处理；不要悄然修复论文而仍称原版复现。",
+    "outputs": "implementation_diff.tsv；reproduction_report.md；pinned_versions.json。",
+    "sources": [
+      "T1",
+      "P1",
+      "T5",
+      "T6"
+    ],
+    "tests": [
+      "E21"
+    ]
+  },
+  {
+    "slug": "20-skill-evaluation-and-versioning",
+    "title": "Skill 验收与知识更新",
+    "trigger": "把文献归纳成 skill、更新规则或交给 agent 长期调用时。",
+    "inputs": "技能草稿；来源；正常案例、反例与人工验收标准。",
+    "steps": [
+      "每条知识标为 F 原文事实、S 综合规则或 P 建议实验，不混写成作者结论。",
+      "声明触发条件、输入、步骤、分支、验收、失败处理和产物。",
+      "用正常案例、边界案例、故意错误案例测试 agent 是否作出正确研究决策。",
+      "检查文献版本、作者归属、文献覆盖与未解决冲突；缺失信息应降低确定性。",
+      "新证据导致修改时记录变化理由、影响的 skills、旧结论是否失效。"
+    ],
+    "branches": "格式 lint 通过只证明包结构一致；实际案例通过才可报告行为验收，且不等于科学结果复现。",
+    "gate": "正常与反例测试都留有执行记录；未运行的测试保持 not_run。",
+    "failure": "缩小触发范围、完善失败分支或撤回错误规则；不以增加论文数量代替验证。",
+    "outputs": "evaluation_results.json；CHANGELOG.md；coverage_gaps.md。",
+    "sources": [
+      "T6",
+      "Y4",
+      "J2",
+      "C3"
+    ],
+    "tests": [
+      "E22"
+    ]
+  },
+  {
+    "slug": "21-independent-replicates-and-resampling",
+    "title": "独立重复、分层切分与重采样",
+    "trigger": "设计患者泛化、单细胞/空间差异检验、模型性能误差条或bootstrap时。",
+    "inputs": "原始counts；donor/sample/slide/FOV/cell/niche层级；处理分配；配对关系；预测目标与推断总体。",
+    "steps": [
+      "在分析卡中分别指定观测、表征、实验分配、独立推断与泛化单位；以每个单位计数，禁止用seed数充当donor数。",
+      "先按目标设计group holdout及nested调参；所有依赖训练的预处理、参考、图和参数都接受泄漏审计，区分联合整合和新患者预测。",
+      "表达DS时选择donor×预定义cell type的raw-count聚合或适配层级模型；丰度DA另定义组成目标；缺失细胞群不自动补零。",
+      "设计矩阵检查full rank与残差自由度；配对与不配对分支不同，避免condition与donor固定效应完全共线。",
+      "按合法独立单位或随机化块置换/重采样，保留邻域重叠；记录零假设、交换集合及B的分辨率。",
+      "输出donor级效应、区间和leave-one-donor敏感性；运行pseudoreplication反例后解释它只证明指定生成机制。"
+    ],
+    "branches": "只有一位donor/组：描述或补样本；有配对：pair内合法交换；只有空间随机标记零假设：不把结果解释为患者效应；高维生成任务：依据inductive/transductive协议明确holdout信息。",
+    "gate": "独立单位、split与检验零假设一致；矩阵可识别；区间没有把细胞、fold、seed当独立患者。",
+    "failure": "泄漏则重做全部受影响分析；独立重复不足则收缩推断，不靠增加细胞数量或BY修复。",
+    "outputs": "statistical_analysis_plan.yaml；unit_counts；split_manifest；design_rank；effect_table。",
+    "sources": [
+      "G01",
+      "G02",
+      "G03",
+      "G06",
+      "G34"
+    ],
+    "chapter": "02_statistics.md",
+    "tests": [
+      "test_independent_group_guard",
+      "test_pseudobulk_preserves_count_sum",
+      "independent_replicates.json"
+    ]
+  },
+  {
+    "slug": "22-multiple-testing-and-selective-inference",
+    "title": "多重检验与选择后推断",
+    "trigger": "报告显著gene/program/LR/niche、挑选driver、先聚类/拟合pseudotime再检验时。",
+    "inputs": "完整待检验集合；每个原始p值的生成方法；筛选时间线；先验/标签来源；零假设和声明层级。",
+    "steps": [
+      "判断输入是有效频率p值还是后验概率/Bayes factor/score；后几者不能直接交给BH。",
+      "在看结果前定义family及筛选规则，包括gene×cell type×comparison；多层family需要相应的层级控制方案。",
+      "先审查伪重复、模型拟合、可交换性及选择后有效性，再按依赖假设选择BH/BY或其他有保证方法。",
+      "追踪latent/cluster/program构建与测试是否用同一信息；冻结模型或分患者并不总能解除对同一待测gene的循环。",
+      "需要count splitting时先核对Poisson/NB假设与参数估计；不要把分子拆分当作新患者。",
+      "保留完整p/q/effect表、过滤原因、Monte Carlo分辨率及确认性/探索性标记；运行selection反例。"
+    ],
+    "branches": "输入是后验量：使用对应后验决策框架或另做有效频率检验；任意依赖且p有效：可考虑BY并报告保守性；选择偏差未解决：探索性展示或专门选择性推断。",
+    "gate": "family、p值有效性与依赖条件可追溯；全表可审计；报告效应与区间，而非只看q<0.05。",
+    "failure": "不能用BY替代有效性；不能筛到显著后只对小集合校正；需要独立验证时不随意重定义阈值。",
+    "outputs": "hypothesis_family.yaml；all_tests.tsv；selection_trace；multiplicity_report。",
+    "sources": [
+      "G04",
+      "G05",
+      "G06",
+      "G07",
+      "G08",
+      "G19"
+    ],
+    "chapter": "02_statistics.md",
+    "tests": [
+      "test_adjustments_match_statsmodels",
+      "test_permutation_nonzero_and_exact",
+      "multiple_testing.json"
+    ]
+  },
+  {
+    "slug": "23-causal-identification-and-perturbations",
+    "title": "因果识别、干预与机制证据",
+    "trigger": "声称driver、调控因果、反事实、干预效果或“恶变概率”时。",
+    "inputs": "目标总体/单位；处理操作与时点；结局；处理前/后变量；分配与选择机制；DAG和证据。",
+    "steps": [
+      "把预测、平均干预效应、个体反事实和机制解释分开；填写可实际操作的处理和对照。",
+      "建立DAG并标出未测混杂、collider、mediator及selection；不把所有embedding维度盲目作为调整变量。",
+      "检查一致性、可交换性、positivity、干扰/处理版本；给出识别公式，或明确为何当前不能识别。",
+      "仅在识别条件支持后选择g-computation/IPW/AIPW；独立单位cross-fit，检查权重、重叠与有效样本量。",
+      "扰动数据审计guide检测、编辑成功、off-target、存活和处理后选择；按真正想泛化的gene/donor/context分割。",
+      "设计负对照、替代DAG与未测混杂敏感性；对OT/FM/通讯仅有模型输出时不升级成真实干预机制。"
+    ],
+    "branches": "有随机化：检查执行与选择；观测数据：明确调整及不可检验假设；有邻居干扰：定义暴露映射或cluster干预；不能识别：保留预测/关联任务。",
+    "gate": "每个因果主张都有estimand、识别假设及匹配证据；不能仅以拟合优度过关。",
+    "failure": "发现collider或处理后变量则重新设计；overlap差则报告目标变化；不通过加大网络修复缺失识别。",
+    "outputs": "causal_estimand.yaml；DAG_edge_evidence；identification_note；overlap_and_sensitivity_report。",
+    "sources": [
+      "G09",
+      "G10",
+      "G31",
+      "G32",
+      "G33",
+      "G35"
+    ],
+    "chapter": "03_causal.md",
+    "tests": [
+      "test_aipw_randomized_linear_known_effect",
+      "causal_identification.json"
+    ]
+  },
+  {
+    "slug": "24-spatial-upstream-measurement-error",
+    "title": "空间测量链与上游误差审计",
+    "trigger": "构造空间图、发现罕见混合状态/界面生态位、比较分割或推断通讯前。",
+    "inputs": "平台与版本；分子/spot/count/图像/边界；坐标单位和FOV；negative/background；参考与注释来源。",
+    "steps": [
+      "画出本平台测量链，从检测/分割或捕获/扩散到counts、annotation、graph；区分观察与模型推断信息。",
+      "检查错分配、merge/split、漏检、背景污染、面板缺失、坐标/FOV拼接及组织mask；不要统一当独立Gaussian噪声。",
+      "选择与测量机制相符的校正与验证；记录算法版本，不把历史Xenium教程等同所有当前数据。",
+      "检查marker优化导致的循环验证；优先用独立染色、人工核查或未参与上游建模的证据。",
+      "扰动或抽样上游后重算counts、注释、邻域与下游；不同分割节点先建立映射或转到共同区域。",
+      "分别报告固定模型与全流程重拟合的敏感性，并把主观stress范围与校准不确定性区分。"
+    ],
+    "branches": "无分子/图像：只能做可见层面的检查并记录不可见风险；Visium：反卷积不是单细胞坐标；成像分割：类型与几何误差可能相关。",
+    "gate": "坐标/ID/背景契约通过；关键结论在合理上游设置下稳定或明确限定；未知误差率不伪装实测。",
+    "failure": "上游伪影则回到分配/坐标/参考处理；不能只在最后embedding加噪声后宣称全面稳健。",
+    "outputs": "measurement_error.yaml；QC_by_sample；assignment/coordinate_audit；propagation_report。",
+    "sources": [
+      "G11",
+      "G12",
+      "G13",
+      "G14",
+      "G28",
+      "G29",
+      "G30"
+    ],
+    "chapter": "04_spatial_error.md",
+    "tests": [
+      "test_knn_geometric_invariance",
+      "test_zero_contamination_identity",
+      "spatial_measurement.json"
+    ]
+  },
+  {
+    "slug": "25-optimal-transport-theory-and-numerics",
+    "title": "OT/UOT理论、数值与质量语义",
+    "trigger": "用OT做时间对应、整合、空间匹配或作为FM配对时。",
+    "inputs": "支持点语义；质量a/b和总体；成本各项/尺度；正则epsilon/rho/reference；约束与稀疏支持。",
+    "steps": [
+      "写出完整优化目标，区分balanced、UOT、partial与semi-relaxed；确认质量是否有生物学数量含义。",
+      "规定成本可比性、单位和prior来源；跨患者坐标不可直接对齐时禁止把其欧氏距离静默加入。",
+      "显式指定KL参考测度和版本；报告linear与total不同返回量，避免迁移默认值改变科学问题。",
+      "核对log-domain更新、支持裁剪、收敛残差和质量；用单点解析、LP/独立优化器做小规模数值检验。",
+      "做epsilon、rho、cost尺度、reference及minibatch/近似敏感性；GW类另审计非凸初始化。",
+      "输出实际行列边际与未匹配质量；连接FM前重新确认归一化后的训练源/目标分布。"
+    ],
+    "branches": "质量相等且应守恒：balanced；允许缺失但原因未知：UOT而不命名死亡；只保留部分固定质量：partial另建约束；异构空间：考虑GW但不默认可识别。",
+    "gate": "目标函数和源码约定一致；数值已收敛；解释不超过成本/权重/质量证据；FM输入边际明确。",
+    "failure": "不收敛报错而非静默输出；cost平移/缩放需重新核查；不能把行归一后的矩阵仍宣称保持原UOT边际。",
+    "outputs": "ot_config.yaml；cost_contract；solver_diagnostics；coupling/marginal_summary；sensitivity。",
+    "sources": [
+      "G15",
+      "G16",
+      "G17",
+      "G18"
+    ],
+    "chapter": "05_ot.md",
+    "tests": [
+      "test_uot_against_independent_optimizer",
+      "test_uot_reference_changes_plan",
+      "optimal_transport.json"
+    ]
+  },
+  {
+    "slug": "26-flow-matching-design-and-validation",
+    "title": "Flow matching配对、路径与ODE验证",
+    "trigger": "从状态分布学习向量场、连接UOT与FM、解释轨迹/箭头/命运时。",
+    "inputs": "端点及split；coupling/采样权重；time单位；path/noise schedule及导数；网络；ODE；验证真值。",
+    "steps": [
+      "分开endpoint coupling、conditional path和ODE solver；CondOTProbPath本身不完成端点OT。",
+      "推导x_t与dx_t并验证time广播；改变schedule/noise后重新求导，不照抄x1-x0。",
+      "校验UOT归一化后源目标边际；质量源汇需要额外机制，普通概率ODE不自动处理。",
+      "以独立验证速度误差＋ODE积分端点误差双重检查训练；核查设备、eval/no_grad及积分方向。",
+      "做solver步数、coupling、batch size、noise、prior敏感性；保留高维场而非只解释UMAP箭头。",
+      "用独立中间时间/谱系/干预验证路径；区别确定性轨线、隐变量引起的一对多和模型条件平均。"
+    ],
+    "branches": "只有两端：描述模型对应而非唯一真实历史；需增长：加显式质量模型或只分析匹配质量；需同状态随机分支：额外随机变量/过程并另验证；真实时间未知：速度只用归一化单位。",
+    "gate": "路径/导数/采样正确且ODE端点过关；质量与方向解释诚实；不把low loss或漂亮箭头当生物学机制。",
+    "failure": "端点失败先查coupling/schedule/normalization/solver；无法验证中间路径则收缩叙述，不加网络替代证据。",
+    "outputs": "fm_config.yaml；path_derivation；training_and_solver_report；biological_validation_matrix。",
+    "sources": [
+      "G22",
+      "G23",
+      "G24",
+      "G25",
+      "G26",
+      "G27"
+    ],
+    "chapter": "06_flow_matching.md",
+    "tests": [
+      "test_affine_time_derivative",
+      "test_rk4_affine_endpoint",
+      "flow_matching.json"
+    ]
+  },
+  {
+    "slug": "27-supplement-to-code-reproduction",
+    "title": "补充材料到源码与原图复现",
+    "trigger": "把文献经验升级为具体实现、迁移算法或声称“已复现”时。",
+    "inputs": "论文/版本/更正；全部SI文件目录；软件与分析仓库；归档/commit；数据/许可；目标figure与容差。",
+    "steps": [
+      "建立逐文件逐图表coverage清单，区分下载、文字阅读、页图核对和结果复现；不足处明确null。",
+      "追踪claim→SI定位→函数→输入/配置→输出/指标；source data不是输入训练数据，软件仓库不等于分析仓库。",
+      "锁定发表版本与依赖，保留原要求和适配patch；不随意改用户主环境。",
+      "先做独立公式/函数微验证，再运行官方最小示例，再重跑指定原图，最后扩展全数据。",
+      "记录实际命令、退出码、环境、输入/输出SHA256、数值与科学容差，保存失败运行。",
+      "用正交证据等级标注结论；synthetic单元通过不升级成原数据复现，静态检查不升级成agent能力。"
+    ],
+    "branches": "SI/数据访问失败：记录具体阻塞；版本冲突：隔离环境与patch；算法必须修改：称适配版；数据受控：不上传到公共包。",
+    "gate": "复现状态有真实日志和对应数据/版本支持；完整SI无隐性遗漏；结果差异可解释并保留。",
+    "failure": "不虚构参数/commit/数据；不能从正文猜未读SI；未完成的实验保留为计划而不是结论。",
+    "outputs": "reproduction_manifest.yaml；supplement_coverage；source_audit；execution_log；figure_diff。",
+    "sources": [
+      "G19",
+      "G20",
+      "G21",
+      "G18",
+      "G25"
+    ],
+    "chapter": "01_reproduction.md",
+    "tests": [
+      "test_posterior_probability_formula_not_a_pvalue",
+      "tests/test_package.py"
+    ]
+  },
+  {
+    "slug": "28-uncertainty-propagation-and-calibration",
+    "title": "分层不确定性、传播与校准",
+    "trigger": "整合多个模型/测量阶段、汇报置信区间、稳健性或恶变风险分数时。",
+    "inputs": "目标输出与尺度；donor/测量/算法/参数/结构不确定性；误差来源模型；重采样机制；独立真值。",
+    "steps": [
+      "按来源拆分不确定性并定义比较对象，先对齐program语义、细胞映射或组织区域。",
+      "以独立生物单位为外层，测量模型为内层，按任务选择固定模型评估或全流程重拟合。",
+      "保留表达与几何等耦合扰动，检查来源之间及模块之间的交互；不能把所有runs视作独立样本。",
+      "若只使用主观noise scenarios，则命名stress/sensitivity；有概率模型才讨论后验；有重复抽样保证才称置信区间。",
+      "概率预测用目标结局检验校准与覆盖；未有随访时流向/晚期相似度不命名未来恶变概率。",
+      "把稳定证据限定到相应task/program/区域；对不稳部分定位失败来源而非整项全肯定或全否定。"
+    ],
+    "branches": "有校准测量模型：抽样传播并检验覆盖；仅多算法分歧：报告敏感性；donor过少：不以细胞bootstrap充数；生存终点：转专门删失与时间校准流程。",
+    "gate": "区间与其随机机制一致；结论与稳定对象匹配；概率的目标和验证总体清楚。",
+    "failure": "发现错误覆盖或方向不稳则降低主张、聚合尺度或补证据；不将seed标准差包装为总不确定性。",
+    "outputs": "uncertainty_plan.yaml；layered_sensitivity；calibration_report；claim_scope_update。",
+    "sources": [
+      "G02",
+      "G08",
+      "G12",
+      "G16",
+      "G24",
+      "G32"
+    ],
+    "chapter": "07_uncertainty.md",
+    "tests": [
+      "spatial_measurement.json",
+      "causal_identification.json",
+      "optimal_transport.json"
+    ]
+  }
+]

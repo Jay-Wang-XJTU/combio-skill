@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 多重检验与选择后推断"
+  short_description: "报告显著gene/program/LR/niche、挑选driver、先聚类/拟合pseudotime再检验时。"
+  default_prompt: "请使用 $omics-multiple-testing 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

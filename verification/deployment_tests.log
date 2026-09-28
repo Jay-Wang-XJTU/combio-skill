@@ -1,0 +1,35 @@
+test_additive_update_and_backup (test_deployment.DeployTests.test_additive_update_and_backup) ... ok
+test_all_install (test_deployment.DeployTests.test_all_install) ... ok
+test_archive_reproducible (test_deployment.DeployTests.test_archive_reproducible) ... ok
+test_concurrent_install_lock_rejected (test_deployment.DeployTests.test_concurrent_install_lock_rejected) ... ok
+test_conflicting_flags (test_deployment.DeployTests.test_conflicting_flags) ... ok
+test_dry_run_has_no_writes (test_deployment.DeployTests.test_dry_run_has_no_writes) ... ok
+test_dynamic_profile (test_deployment.DeployTests.test_dynamic_profile) ... ok
+test_edited_file_detected_and_preserved (test_deployment.DeployTests.test_edited_file_detected_and_preserved) ... ok
+test_exact_recursive_discovery (test_deployment.DeployTests.test_exact_recursive_discovery) ... ok
+test_foreign_collision_preserved (test_deployment.DeployTests.test_foreign_collision_preserved) ... ok
+test_fresh_local_git_clone_install (test_deployment.DeployTests.test_fresh_local_git_clone_install) ... ok
+test_idempotent (test_deployment.DeployTests.test_idempotent) ... ok
+test_legacy_edited_rejected (test_deployment.DeployTests.test_legacy_edited_rejected) ... ok
+test_legacy_migration_keeps_library (test_deployment.DeployTests.test_legacy_migration_keeps_library) ... ok
+test_missing_dependency_detected (test_deployment.DeployTests.test_missing_dependency_detected) ... ok
+test_numeric_selection (test_deployment.DeployTests.test_numeric_selection) ... ok
+test_project_required (test_deployment.DeployTests.test_project_required) ... ok
+test_project_scope (test_deployment.DeployTests.test_project_scope) ... ok
+test_publish_plan_no_side_effects (test_deployment.DeployTests.test_publish_plan_no_side_effects) ... ok
+test_publish_requires_valid_repo (test_deployment.DeployTests.test_publish_requires_valid_repo) ... ok
+test_repository_valid (test_deployment.DeployTests.test_repository_valid) ... ok
+test_rollback_after_postcheck_failure (test_deployment.DeployTests.test_rollback_after_postcheck_failure) ... ok
+test_router_independent (test_deployment.DeployTests.test_router_independent) ... ok
+test_stateless_check_after_copy (test_deployment.DeployTests.test_stateless_check_after_copy) ... ok
+test_symlink_destination_rejected (test_deployment.DeployTests.test_symlink_destination_rejected) ... ok
+test_unknown_name (test_deployment.DeployTests.test_unknown_name) ... ok
+test_unknown_profile (test_deployment.DeployTests.test_unknown_profile) ... ok
+test_unrelated_skill_preserved (test_deployment.DeployTests.test_unrelated_skill_preserved) ... ok
+test_unsafe_manifest_rejected (test_deployment.DeployTests.test_unsafe_manifest_rejected) ... ok
+test_update_required (test_deployment.DeployTests.test_update_required) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 30.281s
+
+OK

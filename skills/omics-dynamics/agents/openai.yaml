@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 状态动态、命运与最优传输"
+  short_description: "伪时间、命运推断、跨时间 OT 或连续状态建模时。"
+  default_prompt: "请使用 $omics-dynamics 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

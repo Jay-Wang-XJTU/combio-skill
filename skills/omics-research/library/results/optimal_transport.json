@@ -1,0 +1,29 @@
+{
+  "scope": "independent dense implementation vs SciPy optimization; POT runtime not used",
+  "balanced_marginal_residual": 8.388737482434294e-10,
+  "balanced_linear_cost": 0.09999999916113964,
+  "unregularized_LP_cost": 0.09999999999999998,
+  "unbalanced": [
+    {
+      "reference": "product",
+      "iterations": 33,
+      "first_order_residual": 7.68779540027964e-10,
+      "mass": 0.7852496156400923,
+      "linear_cost": 0.2152659289021558,
+      "total_objective": 0.3109758077594898,
+      "oracle_max_plan_abs_error": 5.171803540982012e-10,
+      "oracle_objective_abs_error": 1.1102230246251565e-16
+    },
+    {
+      "reference": "ones",
+      "iterations": 33,
+      "first_order_residual": 7.447452654574249e-10,
+      "mass": 1.0131291991433733,
+      "linear_cost": 0.276570673035099,
+      "total_objective": 1.3624286810443929,
+      "oracle_max_plan_abs_error": 3.437203299760938e-10,
+      "oracle_objective_abs_error": 0.0
+    }
+  ],
+  "seconds": 0.0486929029999601
+}

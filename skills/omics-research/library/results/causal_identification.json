@@ -1,0 +1,22 @@
+{
+  "scope": "synthetic measured-confounder and collider counterexamples, not patient evidence",
+  "seed": 9001,
+  "independent_units": 10000,
+  "known_ATE": 2.0,
+  "unadjusted_difference": 3.3059414354120116,
+  "crossfit_AIPW": {
+    "ate": 1.9909949792930908,
+    "iid_standard_error": 0.021787491941413856,
+    "propensity_min_max": [
+      0.050717459218017284,
+      0.969869268045076
+    ],
+    "fraction_clipped": 0.0,
+    "weight_effective_sample_size": 8244.764444714247,
+    "assumption": "independent rows; consistency, positivity, measured exchangeability; nuisance regularity"
+  },
+  "collider_example_true_effect": 0.0,
+  "collider_unadjusted_coefficient": 0.0039573043520023405,
+  "collider_adjusted_coefficient": -0.9428576229318918,
+  "seconds": 0.036927804000015385
+}

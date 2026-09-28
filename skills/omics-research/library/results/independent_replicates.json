@@ -1,0 +1,19 @@
+{
+  "scope": "synthetic Gaussian null; donor mean Welch test, not NB DE",
+  "seed": 20260928,
+  "repetitions": 400,
+  "donors_per_arm": 8,
+  "cells_per_donor": 60,
+  "nominal_alpha": 0.05,
+  "cell_level_false_positive_rate": 0.7125,
+  "donor_level_false_positive_rate": 0.04,
+  "cell_level_monte_carlo_95CI": [
+    0.6662901779980862,
+    0.7546670969098378
+  ],
+  "donor_level_monte_carlo_95CI": [
+    0.024769063069711758,
+    0.06398224771784103
+  ],
+  "seconds": 0.39084930899997516
+}

@@ -1,0 +1,23 @@
+schema_version: 1
+status: requires_project_values
+population: null
+exposure_or_intervention: null
+outcome_and_measurement_time: null
+estimand: null # ATE / ATT / intervention response, not merely embedding difference
+causal_graph: null
+pre_exposure_adjustment_set: []
+forbidden_adjustments: [] # identified colliders / mediators for total effect
+identification:
+  consistency: null
+  positivity: null
+  exchangeability_argument: null
+  interference_and_exposure_mapping: null
+  selection_and_missingness: null
+estimation:
+  nuisance_models: null
+  crossfit_unit: donor
+  variance_unit: donor
+  clipping_threshold_and_sensitivity: null
+negative_controls: []
+unmeasured_confounding_sensitivity: null
+claim_when_unidentified: association_or_model_counterfactual_not_identified_causal_effect

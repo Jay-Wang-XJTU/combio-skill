@@ -1,0 +1,6 @@
+interface:
+  display_name: "Omics | 组学方法研究总路由"
+  short_description: "单细胞与空间组学方法课题的总路由；定题到验证的跨阶段任务，按需选择子技能。"
+  default_prompt: "请使用 $omics-research 处理当前任务，先读取项目上下文与对应完整技能。"
+policy:
+  allow_implicit_invocation: true

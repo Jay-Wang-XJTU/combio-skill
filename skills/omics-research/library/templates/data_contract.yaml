@@ -1,0 +1,36 @@
+status: unfilled_template
+study:
+  question: null
+  analysis_unit: null
+  independent_unit: null
+  intended_use: null
+hierarchy:
+  patient_id: null
+  sample_id: null
+  slide_id: null
+  fov_id: null
+  cell_or_spot_id: null
+measurement:
+  platform: null
+  species: null
+  feature_space: null
+  count_semantics: null
+  coordinate_unit: null
+  resolution: null
+  observed_vs_imputed: null
+  measured_vs_inferred_coordinates: null
+labels:
+  biological_state: null
+  pathology_source: null
+  outcome_definition: null
+  followup: null
+  label_generator: null
+splits:
+  protocol: null
+  group_key: null
+  adaptation_allowed: null
+  forbidden_information: []
+checks:
+  stage_batch_confounding: null
+  reference_coverage: null
+  missing_fields: []
